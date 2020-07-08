@@ -1,0 +1,28 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.notice.label.header = Cabecera:
+administrator.notice.label.creationMoment = Momento:
+administrator.notice.label.deadline = Final:
+administrator.notice.label.body = Cuerpo:
+administrator.notice.label.link = Link:
+administrator.notice.form.button.return = Volver
+
+administrator.notice.list.label.header = Cabecera
+administrator.notice.list.label.creationMoment = Momento
+administrator.notice.list.label.deadline = Final
+administrator.notice.list.label.body = Cuerpo
+administrator.notice.label.link = Link
+administrator.notice.label.finalMode = Modo Final
+
+administrator.notice.form.button.create = Crear Noticia
+
+administrator.notice.form.error.tooClose= La Fecha de Fin debe estar una semana posterior a la fecha actual
+administrator.notice.error.finalMode = Para poder crearlo debe estar en modo final

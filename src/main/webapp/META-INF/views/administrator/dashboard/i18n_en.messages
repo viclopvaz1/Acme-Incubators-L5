@@ -1,0 +1,6 @@
+administrator.dashboard.form.message = Total number of technologies grouped by activity sector.
+administrator.dashboard.form.message2 = Total number of tools grouped by activity sector.
+administrator.dashboard.form.message3 = Ratio of open-source technologies versus closed-source technologies. 
+administrator.dashboard.form.message4 = Ratio of open-source tools versus closed-source tools.
+administrator.dashboard.form.message5 = Ratio of Investment Rounds grouped by kind.
+administrator.dashboard.form.message6 = Ratio of Application grouped by status.

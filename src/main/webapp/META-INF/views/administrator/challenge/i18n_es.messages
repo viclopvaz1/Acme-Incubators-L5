@@ -1,0 +1,37 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.challenge.list.label.deadline = Fecha Fin
+administrator.challenge.list.label.description = Descripción
+administrator.challenge.list.label.title = Título
+
+administrator.challenge.form.label.deadline = Fecha Fin
+administrator.challenge.form.label.description = Decripción
+administrator.challenge.form.label.title = Título
+administrator.challenge.form.label.expertReward =  Recompensa de experto
+administrator.challenge.form.label.averageReward =  Recompensa de promedio
+administrator.challenge.form.label.rookieReward =  Recompensa de principiante
+administrator.challenge.form.label.expertGoal = Objetivo de experto
+administrator.challenge.form.label.averageGoal = Objetivo de promedio
+administrator.challenge.form.label.rookieGoal = Objetivo de principiante
+
+
+administrator.challenge.form.button.create = Crear
+administrator.challenge.form.button.update = Actualizar
+administrator.challenge.form.button.delete = Borrar
+administrator.challenge.form.button.return = Volver
+
+administrator.challenge.form.error.tooClose = La Fecha de Fin debe estar un mes posterior a la fecha actual
+administrator.challenge.form.error.zoneEurG = Solo se permite la moneda euro, EUR o €
+administrator.challenge.form.error.zoneEurS = Solo se permite la moneda euro, EUR o €
+administrator.challenge.form.error.zoneEurB = Solo se permite la moneda euro, EUR o €
+
+administrator.challenge.form.error.goldBsilver = El objetivo de plata debe ser más bajo que el de oro
+administrator.challenge.form.error.silverBbronze = El objetivo de bronce debe ser más bajo que el de plata

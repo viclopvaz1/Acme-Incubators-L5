@@ -1,0 +1,30 @@
+  
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+
+
+entrepreneur.investment-round.form.label.title = Titulo
+entrepreneur.investment-round.form.label.ticker = Ticker
+entrepreneur.investment-round.form.label.amountMoney = Cantidad de dinero
+entrepreneur.investment-round.form.label.description = Descripción
+entrepreneur.investment-round.form.label.creationMoment = Fecha de creación
+entrepreneur.investment-round.form.label.round = Round
+entrepreneur.investment-round.form.label.moreInfo = Mas informacion
+entrepreneur.investment-round.form.label.entrepreneur = Entrepreneur
+entrepreneur.investment-round.form.label.status = Estado
+
+
+entrepreneur.investment-round.list.label.title = Titulo
+entrepreneur.investment-round.list.label.description = Description
+
+entrepreneur.investment-round.form.button.accounting-record = Registro de Contabilidad
+entrepreneur.investment-round.form.button.return= Volver

@@ -1,0 +1,9 @@
+administrator.configuration.list.label.spamWords = SpamWords
+administrator.configuration.list.label.sectors = Sectors
+
+administrator.configuration.form.label.spamWords = SpamWords
+administrator.configuration.form.label.sectors = Sectors
+
+administrator.configuration.form.button.update = Update
+administrator.configuration.form.button.delete = Delete
+administrator.configuration.form.button.return = Return

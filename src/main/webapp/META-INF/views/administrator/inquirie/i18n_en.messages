@@ -1,0 +1,36 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.inquirie.label.title = Title:
+administrator.inquirie.label.creationMoment = Moment:
+administrator.inquirie.label.deadline = Deadline:
+administrator.inquirie.label.description = Descripcion:
+administrator.inquirie.label.maxMoney = Max Money:
+administrator.inquirie.label.email = Email:
+administrator.inquirie.label.minMoney = Min Money:
+
+administrator.inquirie.form.button.return = Return
+
+administrator.inquirie.list.label.title = Title
+administrator.inquirie.list.label.creationMoment = Moment
+administrator.inquirie.list.label.deadline = Deadline
+administrator.inquirie.list.label.description = Description
+administrator.inquirie.list.maxMoney = Max Money:
+administrator.inquirie.list.email = Email:
+administrator.inquirie.list.minMoney = Min Money:
+
+administrator.inquirie.form.button.create = Create Inquirie
+administrator.inquirie.form.button.update = Update Inquirie
+administrator.inquirie.form.button.delete = Delete Inquirie
+
+administrator.inquirie.form.error.zoneEurMax = Only the euro, EUR or € currency is allowed
+administrator.inquirie.form.error.zoneEurMin = Only the euro, EUR or € currency is allowed
+administrator.inquirie.form.error.maxR = Max Money must be bigger than Min Money
+administrator.inquirie.form.error.tooClose = Deadline must be one week after the Current Date

@@ -1,0 +1,36 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.inquirie.label.title = Titulo:
+administrator.inquirie.label.creationMoment = Momento:
+administrator.inquirie.label.deadline = Final:
+administrator.inquirie.label.description = Descripcion:
+administrator.inquirie.label.maxMoney = Dinero Maximo:
+administrator.inquirie.label.email = Email:
+administrator.inquirie.label.minMoney = Dinero Minimo:
+
+administrator.inquirie.form.button.return = Return
+
+administrator.inquirie.list.label.title = Titulo
+administrator.inquirie.list.label.creationMoment = Momento
+administrator.inquirie.list.label.deadline = Final
+administrator.inquirie.list.label.description = Descripcion
+administrator.inquirie.list.maxMoney = Dinero Maximo:
+administrator.inquirie.list.email = Email:
+administrator.inquirie.list.minMoney = Dinero Minimo:
+
+administrator.inquirie.form.button.create = Crear Inquirie
+administrator.inquirie.form.button.update = Actualizar Inquirie
+administrator.inquirie.form.button.delete = Borrar Inquirie
+
+administrator.inquirie.form.error.zoneEurMax = Solo se permite la moneda euro, EUR o €
+administrator.inquirie.form.error.zoneEurMin = Solo se permite la moneda euro, EUR o €
+administrator.inquirie.form.error.maxR = Max Money debe ser mayor que Min Money
+administrator.inquirie.form.error.tooClose = La Fecha de Fin debe estar una semana posterior a la Fecha Actual

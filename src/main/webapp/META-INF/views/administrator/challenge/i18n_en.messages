@@ -1,0 +1,36 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.challenge.list.label.deadline = Deadline
+administrator.challenge.list.label.description = Description 
+administrator.challenge.list.label.title = Title
+
+administrator.challenge.form.label.deadline = Deadline
+administrator.challenge.form.label.description = Description
+administrator.challenge.form.label.title = Title
+administrator.challenge.form.label.expertReward = Reward for expert
+administrator.challenge.form.label.averageReward = Reward for average
+administrator.challenge.form.label.rookieReward = Reward for rookie
+administrator.challenge.form.label.expertGoal = Goal for expert
+administrator.challenge.form.label.averageGoal = Goal for average
+administrator.challenge.form.label.rookieGoal = Goal for rookie
+
+administrator.challenge.form.button.create = Create
+administrator.challenge.form.button.update = Update
+administrator.challenge.form.button.delete = Delete
+administrator.challenge.form.button.return = Return
+
+administrator.challenge.form.error.tooClose = Deadline must be one moth after the current date
+administrator.challenge.form.error.zoneEurE = Only the euro, EUR or € currency is allowed
+administrator.challenge.form.error.zoneEurA = Only the euro, EUR or € currency is allowed
+administrator.challenge.form.error.zoneEurR = Only the euro, EUR or € currency is allowed
+
+administrator.challenge.form.error.expertBaverage = Average reward must be lower than expert reward
+administrator.challenge.form.error.averageBrookie = Rookie reward must be lower than average reward
