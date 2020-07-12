@@ -2,9 +2,10 @@
 package acme.entities.configurations;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -20,8 +21,9 @@ public class Configuration extends DomainEntity {
 	@NotBlank
 	private String				spamWords;
 
-	@DecimalMax(value = "100.0")
-	@DecimalMin(value = "2.50")
+	@Min(0)
+	@Max(100)
+	@NotNull
 	private Double				spamThreshold;
 
 	@NotBlank

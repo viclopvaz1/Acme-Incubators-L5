@@ -12,9 +12,7 @@
 
 	<bean id="configuration01" class="acme.entities.configurations.Configuration">
 		<property name="spamWords"
-			value=" viagra, sex, 
-			cialis, hard_core, cialis, nigeria, you’ve won, million dollar, 
-				millon de dolares, has ganado, explícito, sexo"></property>
+			value="sex,sexo,hardcore,viagra,cialis,Nigeria,you've won,has ganado,million dolar,un millon de dólares"></property>
 		<property name="spamThreshold" value="2.50" />
 		<property name="sectors" value="Technology, Science, Arts, Business"></property>
 	</bean>
@@ -508,7 +506,7 @@
 
     <bean name="application1" class="acme.entities.applications.Application">
         <property name="ticker" value="SEC-20-000000" />
-        <property name="creationMoment" value="2019/12/01 10:00" />
+        <property name="creationMoment" value="2020/07/11 10:00" />
         <property name="statement" value="no contempla" />
         <property name="moneyOffer" value="€ 400" />
         <property name="investor" ref="investor1Investor" />
@@ -518,7 +516,7 @@
 
     <bean name="application2" class="acme.entities.applications.Application">
         <property name="ticker" value="SEC-20-000001" />
-        <property name="creationMoment" value="2019/12/01 10:00" />
+        <property name="creationMoment" value="2020/07/05 10:00" />
         <property name="statement" value="sin especificacion" />
         <property name="moneyOffer" value="€ 400" />
         <property name="investor" ref="investor2Investor" />
@@ -528,7 +526,7 @@
     
     <bean name="application3" class="acme.entities.applications.Application">
         <property name="ticker" value="SEC-20-000002" />
-        <property name="creationMoment" value="2019/12/01 10:00" />
+        <property name="creationMoment" value="2020/07/10 10:00" />
         <property name="statement" value="sin especificacion" />
         <property name="moneyOffer" value="€ 400" />
         <property name="investor" ref="investor2Investor" />

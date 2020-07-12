@@ -56,6 +56,13 @@
 <div>
 	<canvas id="canvas6"></canvas>
 </div>
+</br>
+<h2>
+	<acme:message code="administrator.dashboard.form.message7"/>
+</h2>
+<div>
+	<canvas id="canvas7"></canvas>
+</div>
 <script type="text/javascript">	
 	$(document).ready(function() {
 		var data = {
@@ -383,4 +390,70 @@
 			
 	});
 </script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+					labels : ["15","14","13","12","11","10",
+						"9","8","7","6","5","4","3","2","1"
+						]
+					,datasets : [
+						{	
+							label : "Pending",
+							borderColor: "#ffff00",
+							fill : false,
+							data : [
+								
+							<jstl:forEach var="pending" items="${Pending}">
+				   		  			"<jstl:out value="${pending}"/>",
+				   			</jstl:forEach>
+							
+				
+							]
+						},
+						{
+							label : "Accepted",
+							borderColor: "#00ff00",
+							fill : false,
+					      	data: [ 
+					        	<jstl:forEach var="accepted" items="${Accepted}">
+						    		"<jstl:out value="${accepted}"/>",
+								</jstl:forEach>
+					        ]
+					     }, 
+					     {
+					    	label : "Rejected",
+					    	borderColor: "#ff0000",
+					    	fill : false,
+							data: [ 
+								<jstl:forEach var="rejected" items="${Rejected}">
+					    			"<jstl:out value="${rejected}"/>",
+								</jstl:forEach>
+							]
+						}
+					    ]
+					};
+			var options = {
+					legend : {
+						display : true
+					},
+					scales : {
+						yAxes:[{
+							ticks:{
+								suggestedMin:0.0,
+							}
+						}]
+					}
+			};
+			var canvas, context;
+			
+			canvas = document.getElementById("canvas7");
+			context = canvas.getContext("2d");
+			new Chart(context, {
+				type : "line",
+				data : data,
+				options : options
+			});
+		});
+	</script>
 

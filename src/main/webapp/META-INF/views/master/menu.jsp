@@ -58,6 +58,7 @@
 		
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.banner" action="/patron/banner/list-mine" />
+			<acme:menu-suboption code="master.menu.patron.create-banner" action="/patron/banner/create" />
 		
 		</acme:menu-option>
 
@@ -170,6 +171,11 @@
 				access="!hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update"
 				access="hasRole('Consumer')" />
+				
+			<acme:menu-suboption code="master.menu.user-account.become-patron" action="/authenticated/patron/create"
+				access="!hasRole('Patron')" />
+			<acme:menu-suboption code="master.menu.user-account.patron" action="/authenticated/patron/update"
+				access="hasRole('Patron')" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()" />

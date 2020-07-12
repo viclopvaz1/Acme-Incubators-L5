@@ -49,6 +49,7 @@ master.menu.anonymous.list-tool-record = List Tool Record
 # master.menu.patron #######################################################
 master.menu.patron = Patron
 master.menu.patron.banner = Banner List 
+master.menu.patron.create-banner = Create Banner
 
 # master.menu.administrator ###################################################
 
@@ -120,6 +121,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-patron = Become a patron
+master.menu.user-account.patron = Patron data
 
 # master.footer ###############################################################
 

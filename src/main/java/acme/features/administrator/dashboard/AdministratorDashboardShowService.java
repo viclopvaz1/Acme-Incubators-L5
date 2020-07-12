@@ -1,7 +1,12 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,13 +38,17 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "totalNumberOftTechnologiesGroupedByActivitySector", "ratioOfOpenSourceTechnologies", "totalNumberOfToolsGroupedByActivitySector", "ratioOfOpenSourceToolsVersusClosedSourceTools", "totalTools", "totalTechnologies",
-			"ratioOfInvestmentRoundsGroupedByKind", "ratioOfApplicationsGroupedByStatus", "totalApplications");
+			"ratioOfInvestmentRoundsGroupedByKind", "ratioOfApplicationsGroupedByStatus", "totalApplications", "Accepted", "Pending", "Rejected", "Dias");
 
 	}
 
 	@Override
 	public Dashboard findOne(final Request<Dashboard> request) {
 		assert request != null;
+
+		Calendar cal = new GregorianCalendar();
+		cal.add(Calendar.DAY_OF_MONTH, -15);
+		Date moment = cal.getTime();
 
 		Collection<Object[]> totalNumberOftTechnologiesGroupedByActivitySector = this.repository.totalNumberOftTechnologiesGroupedByActivitySector();
 		Collection<Object[]> totalNumberOfToolsGroupedByActivitySector = this.repository.totalNumberOfToolsGroupedByActivitySector();
@@ -50,6 +59,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double totalApplications = this.repository.totalApplications();
 		Collection<Object[]> ratioOfInvestmentRoundsGroupedByKind = this.repository.ratioOfInvestmentRoundsGroupedByKind();
 		Collection<Object[]> ratioOfApplicationsGroupedByStatus = this.repository.ratioOfApplicationsGroupedByStatus();
+		//		Collection<Object[]> accepted = this.repository.Accepted(moment);
+		//		Collection<Object[]> pending = this.repository.Pending(moment);
+		//		Collection<Object[]> rejected = this.repository.Rejected(moment);
 
 		Dashboard result = new Dashboard();
 		result.setTotalNumberOftTechnologiesGroupedByActivitySector(totalNumberOftTechnologiesGroupedByActivitySector);
@@ -61,6 +73,27 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setTotalApplications(totalApplications);
 		result.setRatioOfInvestmentRoundsGroupedByKind(ratioOfInvestmentRoundsGroupedByKind);
 		result.setRatioOfApplicationsGroupedByStatus(ratioOfApplicationsGroupedByStatus);
+
+		Date ahora = new Date();
+		List<Integer> accepted = new ArrayList<Integer>();
+		List<Integer> rejected = new ArrayList<Integer>();
+		List<Integer> pending = new ArrayList<Integer>();
+
+		for (int i = 14; i >= 0; i--) {
+
+			Calendar anterior = Calendar.getInstance();
+			anterior.setTime(ahora);
+			anterior.add(Calendar.DAY_OF_MONTH, -i);
+
+			Integer appAcc = this.repository.getApplicationsByStatus("accepted", anterior.getTime());
+
+			accepted.add(14 - i, appAcc);
+			rejected.add(14 - i, this.repository.getApplicationsByStatus("rejected", anterior.getTime()));
+			pending.add(14 - i, this.repository.getApplicationsByStatus("pending", anterior.getTime()));
+		}
+		result.setPending(pending);
+		result.setAccepted(accepted);
+		result.setRejected(rejected);
 
 		return result;
 

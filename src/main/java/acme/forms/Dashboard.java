@@ -3,6 +3,7 @@ package acme.forms;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -30,5 +31,13 @@ public class Dashboard implements Serializable {
 	Collection<Object[]>		ratioOfInvestmentRoundsGroupedByKind;
 
 	Collection<Object[]>		ratioOfApplicationsGroupedByStatus;
+
+	List<Integer>				Accepted;
+
+	List<Integer>				Pending;
+
+	List<Integer>				Rejected;
+
+	String[]					Dias;
 
 }
