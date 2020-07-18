@@ -92,6 +92,7 @@ master.menu.provider.favourite-link = Favourite link
 # master.menu.entrepreneur ##########################################################
 master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investment-round.list = List of Investment Round
+master.menu.entrepreneur.investment-round.create = Create Investment Round
 master.menu.entrepreneur.forum.list = List of Forums
 master.menu.entrepreneur.application.list-mine = List applications
 
@@ -120,6 +121,10 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.entrepreneur = Entrepreneur data
+master.menu.user-account.become-entrepreneur = Become a entrepreneur
+master.menu.user-account.investor = Investor data
+master.menu.user-account.become-investor = Become a investor
 
 # master.footer ###############################################################
 

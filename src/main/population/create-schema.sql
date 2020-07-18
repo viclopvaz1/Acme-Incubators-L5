@@ -31,6 +31,7 @@
         `creation_moment` datetime(6),
         `money_offer_amount` double precision,
         `money_offer_currency` varchar(255),
+        `reason` varchar(1024),
         `statement` varchar(255),
         `status` varchar(255),
         `ticker` varchar(255),
@@ -62,7 +63,7 @@
         `version` integer not null,
         `user_account_id` integer,
         `name` varchar(255),
-        `responsibility_statement` varchar(255),
+        `responsibility_statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -120,9 +121,9 @@
         `version` integer not null,
         `user_account_id` integer,
         `name` varchar(255),
-        `qualification_record` varchar(255),
+        `qualification_record` varchar(1024),
         `sector` varchar(255),
-        `skills_record` varchar(255),
+        `skills_record` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -170,7 +171,7 @@
         `version` integer not null,
         `user_account_id` integer,
         `name` varchar(255),
-        `profile` varchar(255),
+        `profile` varchar(1024),
         `sector` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;

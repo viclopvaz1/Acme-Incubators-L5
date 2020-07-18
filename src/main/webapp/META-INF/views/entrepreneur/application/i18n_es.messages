@@ -15,9 +15,18 @@ entrepreneur.application.form.label.creationMoment = Fecha de creacion
 entrepreneur.application.form.label.statement = Declaración
 entrepreneur.application.form.label.investor = Inversor
 entrepreneur.application.form.label.ticker = Ticker de la Ronda de Inversion
+entrepreneur.application.form.label.status = Estado
+entrepreneur.application.form.label.reason = Justificación
 
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creationMoment = Fecha de creacion
 
-entrepreneur.application.form.button.return = Return
+
+entrepreneur.application.form.button.status = Cambiar Estado
+entrepreneur.application.form.button.update = Actualizar y mandar justificación
+entrepreneur.application.form.button.return = Volver
+
+
+entrepreneur.investment-round.form.error.spamWordsReason = La Justificacion contiene Palabras de Spam
+entrepreneur.application.error.reason = Para rechazar necesitas una justificación

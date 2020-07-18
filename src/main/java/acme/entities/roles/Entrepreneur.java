@@ -1,6 +1,7 @@
 
 package acme.entities.roles;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -26,9 +27,11 @@ public class Entrepreneur extends UserRole {
 	private String				sector;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				qualificationRecord;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				skillsRecord;
 
 	// Derived attributes -----------------------------------------------------

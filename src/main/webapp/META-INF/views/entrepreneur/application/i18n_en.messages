@@ -15,8 +15,18 @@ entrepreneur.application.form.label.creationMoment = Creation Moment
 entrepreneur.application.form.label.statement = Statement
 entrepreneur.application.form.label.investor = Investor
 entrepreneur.application.form.label.ticker = Investment Round Ticker
+entrepreneur.application.form.label.status = Status
+entrepreneur.application.form.label.reason = Reason
+
 
 entrepreneur.application.list.label.ticker = Ticker
 entrepreneur.application.list.label.creationMoment = Creation Moment
 
+
+entrepreneur.application.form.button.status = Change Status
+entrepreneur.application.form.button.update = Update
 entrepreneur.application.form.button.return = Return
+
+
+entrepreneur.investment-round.form.error.spamWordsReason = The Reason contains Spam Words
+entrepreneur.application.error.reason = For rejected you need one reason
