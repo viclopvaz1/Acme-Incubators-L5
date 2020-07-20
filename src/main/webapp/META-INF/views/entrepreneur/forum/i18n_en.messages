@@ -16,3 +16,5 @@ entrepreneur.forum.list.label.ticker = Investment Round Ticker
 
 entrepreneur.forum.form.button.return = Return
 entrepreneur.forum.form.buttom.message = Messages
+entrepreneur.forum.form.button.delete = Delete Forum
+entrepreneur.forum.form.button.create = Create Forum

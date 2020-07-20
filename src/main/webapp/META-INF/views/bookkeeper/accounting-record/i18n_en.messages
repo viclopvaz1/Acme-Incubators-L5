@@ -15,6 +15,8 @@ bookkeeper.accounting-record.form.label.creationMoment = Creation Moment
 bookkeeper.accounting-record.form.label.bookkeeper = Bookkeeper
 bookkeeper.accounting-record.form.label.status = Status
 
+bookkeeper.accounting-record.form.button.create = Create
+bookkeeper.accounting-record.form.button.update = Update
 
 bookkeeper.accounting-record.list.label.title = Title
 bookkeeper.accounting-record.list.label.creationMoment = Creation Moment

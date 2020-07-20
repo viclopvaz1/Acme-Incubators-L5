@@ -66,6 +66,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `bookkeeper_request` (
+       `id` integer not null,
+        `version` integer not null,
+        `firm` varchar(255),
+        `num_bookkeeper_request` integer,
+        `responsability_statement` varchar(255),
+        `authenticated_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -130,6 +140,7 @@
        `id` integer not null,
         `version` integer not null,
         `title` varchar(255),
+        `authenticated_id` integer not null,
         `investment_round_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
@@ -182,6 +193,7 @@
         `creation_moment` datetime(6),
         `tags` varchar(1024),
         `title` varchar(255),
+        `authenticated_id` integer not null,
         `forum_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -210,6 +222,14 @@
         `min_money_amount` double precision,
         `min_money_currency` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `participation` (
+       `id` integer not null,
+        `version` integer not null,
+        `authenticated_id` integer,
+        `forum_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -315,6 +335,9 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    alter table `bookkeeper_request` 
+       add constraint UK_qvxp9h7at8vjbwgpi9q5s3fpl unique (`authenticated_id`);
+
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
 
@@ -363,6 +386,11 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `bookkeeper_request` 
+       add constraint `FKhdducua8c58xhfrls8oiih3j0` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -377,6 +405,11 @@
        add constraint FK_r6tqltqvrlh1cyy8rsj5pev1q 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `forum` 
+       add constraint `FKtch75j3tlc8qby4lru5kkgh83` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
 
     alter table `forum` 
        add constraint `FKq8ggcjgl5by5gf6l5bji632hu` 
@@ -394,7 +427,22 @@
        references `user_account` (`id`);
 
     alter table `message` 
+       add constraint `FK3ny0h1379q528toyokq81noiu` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
+    alter table `message` 
        add constraint `FKfwwpivgx5j4vw4594dgrw884q` 
+       foreign key (`forum_id`) 
+       references `forum` (`id`);
+
+    alter table `participation` 
+       add constraint `FKd49qqi98v3aa6v9v5atuinodj` 
+       foreign key (`authenticated_id`) 
+       references `authenticated` (`id`);
+
+    alter table `participation` 
+       add constraint `FKgxtwovuil6nmbs3j4vf8750vp` 
        foreign key (`forum_id`) 
        references `forum` (`id`);
 

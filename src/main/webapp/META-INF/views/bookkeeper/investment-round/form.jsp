@@ -26,6 +26,6 @@
 	<acme:form-textbox code="bookkeeper.investment-round.form.label.entrepreneur" path="entrepreneur.identity.fullName"/>
 		<acme:form-checkbox code="bookkeeper.investment-round.form.label.status" path="status"/>
 	
-	
+	<acme:form-submit code="bookkeeper.investment-round.form.button.create-accounting-record" action="/bookkeeper/accounting-record/create?investmentRoundId=${id}" method="get"/>
 	<acme:form-return code="bookkeeper.investment-round.form.button.return"/>
 </acme:form>
