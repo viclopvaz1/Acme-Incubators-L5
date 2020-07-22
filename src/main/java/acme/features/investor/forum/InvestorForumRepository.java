@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.forums.Forum;
 import acme.entities.investmentrounds.InvestmentRound;
+import acme.framework.entities.Authenticated;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -21,5 +22,8 @@ public interface InvestorForumRepository extends AbstractRepository {
 
 	@Query("select i from InvestmentRound i where exists(select a from Application a where a.investor.id = ?1 and a.investmentRound.id = i.id and a.status = 'accepted') and i.id = ?2")
 	Collection<InvestmentRound> findInvestmentRound(int id, int iid);
+
+	@Query("select a from Authenticated a WHERE exists (select f from Forum f where f.authenticated.id = a.id) AND a.id =?1")
+	Authenticated findUserInForum(int id);
 
 }
