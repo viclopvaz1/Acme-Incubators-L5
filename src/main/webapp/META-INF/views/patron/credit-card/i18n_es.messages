@@ -16,3 +16,10 @@ patron.credit-card.label.yearExp = Año Caducidad:
 patron.credit-card.label.cvv = CVV:
 
 patron.credit-card.form.button.return = Volver
+
+patron.credit-card.form.buttom.create = Crear
+patron.credit-card.form.buttom.update = Actualizar
+patron.credit-card.form.buttom.delete = Borrar
+
+patron.credit-card.form.error.monthExp = El mes de caducidad debe ser mayor o igual al mes actual, si es el mismo año.
+patron.credit-card.form.error.yearExp = El año de caducidad debe ser mayor o igual al año actual.
