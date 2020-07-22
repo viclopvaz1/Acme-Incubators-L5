@@ -74,6 +74,8 @@ master.menu.administrator.list-tool-record = List Tool Record
 master.menu.administrator.create-notice = Create Notice
 master.menu.administrator.inquirie = Inquirie List
 master.menu.administrator.create-inquirie = Create Inquirie
+master.menu.administrator.list.bookkeeper = Bookkeeper list
+
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Authenticated
@@ -84,6 +86,7 @@ master.menu.authenticated.list-inquirie = List Inquiries
 master.menu.authenticated.list-overture = List Overtures
 master.menu.authenticated.list-challenge = List Challenges
 master.menu.authenticated.list-investment-round = List Investment Round
+master.menu.authenticated.list-forum = List Forums
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
@@ -120,6 +123,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-bookkeeper = Become a bookkeeper
+master.menu.user-account.bookkeeper = Bookkeeper data
 
 # master.footer ###############################################################
 

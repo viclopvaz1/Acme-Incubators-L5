@@ -76,6 +76,7 @@ master.menu.administrator.list-tool-record = Listar registro de herramienta
 master.menu.administrator.create-notice = Crear Noticia
 master.menu.administrator.inquirie = Lista de Inquiries
 master.menu.administrator.create-inquirie = Crear Inquirie
+master.menu.administrator.list.bookkeeper = Listar solicitudes de contables
 
 
 # master.menu.authenticated ###################################################
@@ -87,7 +88,7 @@ master.menu.authenticated.list-inquirie = Lista de Consultas
 master.menu.authenticated.list-overture = Lista de Peticiones
 master.menu.authenticated.list-challenge = Lista de Retos
 master.menu.authenticated.list-investment-round = Lista de Ronda de Inversiones
-
+master.menu.authenticated.list-forum = Lista de foros
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
@@ -123,6 +124,8 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-bookkeeper = Hazte contable
+master.menu.user-account.bookkeeper = Datos de contable
 
 ﻿# master.footer ###############################################################
 

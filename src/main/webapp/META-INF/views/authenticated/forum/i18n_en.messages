@@ -1,0 +1,21 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.forum.form.label.title = Title	
+authenticated.forum.form.label.ticker = Investment Round Ticker
+
+authenticated.forum.list.label.title = Title
+authenticated.forum.list.label.ticker = Investment Round Ticker
+
+authenticated.forum.form.button.return = Return
+authenticated.forum.form.buttom.message = Messages
+authenticated.forum.form.buttom.create.message = Create Message
+authenticated.forum.form.button.participation.list = List of users
+authenticated.participation.form.button.create = Add user

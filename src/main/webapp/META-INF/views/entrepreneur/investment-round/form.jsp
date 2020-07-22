@@ -28,5 +28,7 @@
 	
 	
 	<acme:form-submit test="${status == true && numAccountingRecord > 0}" code="entrepreneur.investment-round.form.button.accounting-record" action="/entrepreneur/accounting-record/list-mine?investmentRoundid=${id}"  method="get"/>
+
+	<acme:form-submit test="${status == true}" code="entrepreneur.investment-round.form.button.forum" action="/entrepreneur/forum/create?investmentRoundid=${id}"  method="get"/>
 	<acme:form-return code="entrepreneur.investment-round.form.button.return"/>
 </acme:form>

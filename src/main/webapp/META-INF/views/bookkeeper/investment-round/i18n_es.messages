@@ -22,6 +22,7 @@ bookkeeper.investment-round.form.label.moreInfo = Mas informacion
 bookkeeper.investment-round.form.label.entrepreneur = Entrepreneur
 bookkeeper.investment-round.form.label.status = Estado
 
+bookkeeper.investment-round.form.button.create-accounting-record = Crear
 
 bookkeeper.investment-round.list.label.title = Titulo
 bookkeeper.investment-round.list.label.description = Description
