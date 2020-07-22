@@ -5,9 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.investmentrounds.InvestmentRound;
+import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -30,6 +32,11 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		assert entity != null;
 		assert model != null;
 
+		int id = request.getModel().getInteger("id");
+		int numAccountingRecord = this.repository.findAccountingRecordByInvestmentRoundId(id);
+		model.setAttribute("numAccountingRecord", numAccountingRecord);
+		Principal principal = request.getPrincipal();
+		model.setAttribute("isInvestor", principal.hasRole(Investor.class));
 		request.unbind(entity, model, "title", "description", "amountMoney", "creationMoment", "round", "ticker", "moreInfo", "entrepreneur.identity.fullName", "status");
 	}
 

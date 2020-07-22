@@ -210,11 +210,11 @@
 
 	<bean id="Challenge01" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Desafio 1 " />
-		<property name="rookieGoal" value="400.0€" />
+		<property name="rookieGoal" value="Objetivo 1" />
 		<property name="deadline" value="2020/12/01 10:35" />
 		<property name="description" value="This is a example" />
-		<property name="averageGoal" value="700.0€" />
-		<property name="expertGoal" value="300.0€" />
+		<property name="averageGoal" value="Objetivo 2" />
+		<property name="expertGoal" value="Objetivo 3" />
 		<property name="rookieReward" value="300.0€" />
 		<property name="averageReward" value="1500.0€" />
 		<property name="expertReward" value="300.0€" />
@@ -224,11 +224,11 @@
 
 	<bean id="Challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Desafio 2" />
-		<property name="rookieGoal" value="400.0€" />
+		<property name="rookieGoal" value="Objetivo 1" />
 		<property name="deadline" value="2020/12/01 10:35" />
 		<property name="description" value="This is a example" />
-		<property name="averageGoal" value="700.0€" />
-		<property name="expertGoal" value="300.0€" />
+		<property name="averageGoal" value="Objetivo 2" />
+		<property name="expertGoal" value="Objetivo 3" />
 		<property name="rookieReward" value="200.0€" />
 		<property name="averageReward" value="1500.0€" />
 		<property name="expertReward" value="300.0€" />
@@ -504,6 +504,22 @@
         <property name="moreInfo" value="http://www.examplekkf.com/" />
         <property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
         <property name="status" value="true" />
+    </bean>
+    
+    <bean name="workProgramme01" class="acme.entities.workprogrammes.WorkProgramme">
+        <property name="title" value="Title 1" />
+        <property name="creationMoment" value="2020/06/06 00:00" />
+        <property name="deadline" value="2020/09/06 00:00" />
+        <property name="budget" value="€ 400" />
+        <property name="investmentRound" ref="investmentRound02" />
+    </bean>
+    
+    <bean name="workProgramme02" class="acme.entities.workprogrammes.WorkProgramme">
+        <property name="title" value="Title 2" />
+        <property name="creationMoment" value="2020/06/06 00:00" />
+        <property name="deadline" value="2020/09/06 00:00" />
+        <property name="budget" value="€ 600" />
+        <property name="investmentRound" ref="investmentRound03" />
     </bean>
 
     <bean name="application1" class="acme.entities.applications.Application">

@@ -25,6 +25,23 @@ entrepreneur.investment-round.form.label.status = Estado
 
 entrepreneur.investment-round.list.label.title = Titulo
 entrepreneur.investment-round.list.label.description = Description
+
+entrepreneur.investment-round.form.button.create = Crear
+entrepreneur.investment-round.form.button.update = Actualizar
+entrepreneur.investment-round.form.button.delete = Borrar
+entrepreneur.investment-round.form.button.return= Volver
+
+
+entrepreneur.investment-round.form.button.create-work-programme = Crear Programa de Trabajo
+entrepreneur.investment-round.form.button.work-programme = Programa de Trabajo
 entrepreneur.investment-round.form.button.forum = Crear foro
 entrepreneur.investment-round.form.button.accounting-record = Registro de Contabilidad
-entrepreneur.investment-round.form.button.return= Volver
+
+
+entrepreneur.investment-round.form.error.hasApplication = No puedes borrar una Ronda de Inversion si tienes una Aplicacion asociada
+entrepreneur.investment-round.form.error.spamWordsTitle = El Titulo contiene Palabras de Spam
+entrepreneur.investment-round.form.error.spamWordsDescription = La Descripcion contiene Palabras de Spam
+entrepreneur.investment-round.form.error.ticker = El formato correcto de los Tickers es SSS-YY-NNNNNN. SSS, las primeras letras del Sector del Emprendedor. YY, los dos ultimos digitos de este año. NNNNNN, un numero entre 000000 y 999999
+entrepreneur.investment-round.form.error.sumBudget = La suma del presupuesto del Programa de Trabajo debe sumar la Cantidad de dinero de la Ronda de Inversion
+entrepreneur.investment-round.form.error.zoneEur = Solo se permite la moneda euro, EUR o €
+entrepreneur.investment-round.form.error.ticker = Ticker existente, pruebe con otra

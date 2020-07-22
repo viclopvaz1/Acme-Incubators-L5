@@ -1,0 +1,29 @@
+  
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+entrepreneur.work-programme.form.label.title = Titulo
+entrepreneur.work-programme.form.label.creationMoment = Fecha Creacion
+entrepreneur.work-programme.form.label.deadline = Fecha Limite
+entrepreneur.work-programme.form.label.budget = Presupuesto
+entrepreneur.work-programme.form.label.investmentRound = Ticker de la Ronda de Inversiones
+
+entrepreneur.work-programme.list.label.title = Titulo
+entrepreneur.work-programme.list.label.creationMoment = Fecha Creacion
+
+entrepreneur.work-programme.form.button.create = Crear
+entrepreneur.work-programme.form.button.update = Actualizar
+entrepreneur.work-programme.form.button.delete = Borrar
+entrepreneur.work-programme.form.button.return = Volver
+
+entrepreneur.work-programme.form.error.spamWordsTitle = El Titulo contiene Palabras de Spam
+entrepreneur.work-programme.form.error.tooClose = La Fecha de Fin debe estar un mes posterior a la fecha actual
+entrepreneur.work-programme.form.error.zoneEur = Solo se permite la moneda euro, EUR o €

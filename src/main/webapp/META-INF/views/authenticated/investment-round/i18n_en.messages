@@ -22,4 +22,7 @@ authenticated.investment-round.form.label.status = Status
 authenticated.investment-round.list.label.title = Title
 authenticated.investment-round.list.label.description = Description
 
+investor.investment-round.form.button.application = Create Application
+authenticated.investment-round.form.button.work-programme = Work Programme
+authenticated.investment-round.form.button.accounting-record = Accounting Record
 authenticated.investment-round.form.button.return = Return

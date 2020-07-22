@@ -24,8 +24,10 @@
 	<acme:form-textbox code="authenticated.investment-round.form.label.round" path="round"/>
 	<acme:form-textbox code="authenticated.investment-round.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textbox code="authenticated.investment-round.form.label.entrepreneur" path="entrepreneur.identity.fullName"/>
-		<acme:form-checkbox code="authenticated.investment-round.form.label.status" path="status"/>
+	<acme:form-checkbox code="authenticated.investment-round.form.label.status" path="status"/>
 	
-	
+	<acme:form-submit test="${isInvestor}" code="investor.investment-round.form.button.application" action="/investor/application/create?investmentRoundid=${id}"  method="get"/>
+	<acme:form-submit code="authenticated.investment-round.form.button.work-programme" action="/authenticated/work-programme/list-mine?investmentRoundid=${id}"  method="get"/>
+	<acme:form-submit test="${numAccountingRecord > 0}" code="authenticated.investment-round.form.button.accounting-record" action="/authenticated/accounting-record/list-mine?investmentRoundid=${id}"  method="get"/>
 	<acme:form-return code="authenticated.investment-round.form.button.return"/>
 </acme:form>
