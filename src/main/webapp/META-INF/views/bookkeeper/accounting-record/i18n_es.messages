@@ -19,6 +19,9 @@ bookkeeper.accounting-record.form.label.creationMoment = Fecha de creación
 bookkeeper.accounting-record.form.label.bookkeeper = Bookeeper
 bookkeeper.accounting-record.form.label.status = Estado
 
+bookkeeper.accounting-record.form.button.create = Crear
+bookkeeper.accounting-record.form.button.update = Actualizar
+
 
 bookkeeper.accounting-record.list.label.title = Titulo
 bookkeeper.accounting-record.list.label.creationMoment = Fecha de creación

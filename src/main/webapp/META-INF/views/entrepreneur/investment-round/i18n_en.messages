@@ -41,3 +41,5 @@ entrepreneur.investment-round.form.error.ticker = The correct format of tickers 
 entrepreneur.investment-round.form.error.sumBudget = The sum of the budget of the Work Programme must sum the Amount Money
 entrepreneur.investment-round.form.error.zoneEur = Only the euro, EUR or € currency is allowed
 entrepreneur.investment-round.form.error.ticker = Existing ticker, try another
+
+entrepreneur.investment-round.form.button.forum = Create forum

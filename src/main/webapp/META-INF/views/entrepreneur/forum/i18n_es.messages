@@ -21,3 +21,7 @@ entrepreneur.forum.list.label.ticker = Ticker de la Ronda de Inversion
 
 entrepreneur.forum.form.button.return= Volver
 entrepreneur.forum.form.buttom.message = Mensajes
+
+
+entrepreneur.forum.form.button.delete =Borrar Foro
+entrepreneur.forum.form.button.create = Crear Foro

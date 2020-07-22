@@ -36,6 +36,12 @@ public class BookkeeperAccountingRecordController extends AbstractController<Boo
 	@Autowired
 	private BookkeeperAccountingRecordShowService		showService;
 
+	@Autowired
+	private BookkeeperAccountingRecordCreateService		createService;
+
+	@Autowired
+	private BookkeeperAccountingRecordUpdateService		updateService;
+
 
 	// Constructors -----------------------------------------------------------
 
@@ -43,6 +49,9 @@ public class BookkeeperAccountingRecordController extends AbstractController<Boo
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+
 	}
 
 }

@@ -21,5 +21,7 @@
 	<acme:form-textarea code="entrepreneur.message.form.label.tags" path="tags"/>
 	<acme:form-textarea code="entrepreneur.message.form.label.body" path="body"/>
 
+	<acme:form-submit test="${command == 'create' }" code="authenticated.message.form.button.create" action="/authenticated/message/create?forumId=${forumId}" method ="post" />
+	
 	<acme:form-return code="entrepreneur.message.form.button.return"/>
 </acme:form>
