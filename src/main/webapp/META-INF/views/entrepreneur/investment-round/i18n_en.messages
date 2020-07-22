@@ -40,6 +40,6 @@ entrepreneur.investment-round.form.error.spamWordsDescription = The description 
 entrepreneur.investment-round.form.error.ticker = The correct format of tickers is SSS-YY-NNNNNN. SSS, the first letters of Entreprenur Activity Sector. YY, two last digits of this year. NNNNNN, number betweeen 000000 and 999999
 entrepreneur.investment-round.form.error.sumBudget = The sum of the budget of the Work Programme must sum the Amount Money
 entrepreneur.investment-round.form.error.zoneEur = Only the euro, EUR or € currency is allowed
-entrepreneur.investment-round.form.error.ticker = Existing ticker, try another
+entrepreneur.investment-round.form.error.tickerRepeat = Existing ticker, try another
 
 entrepreneur.investment-round.form.button.forum = Create forum

@@ -743,4 +743,20 @@ m2=0..*
 role</panel_attributes>
     <additional_attributes>10.0;10.0;340.0;80.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1122</x>
+      <y>18</y>
+      <w>222</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Configuration
+--
++spamWords: String{NotBlank}
++spamThreshold: Double {@Min(0), Max(100), NotNull}
++sectors: Double {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>

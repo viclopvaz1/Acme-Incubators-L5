@@ -50,7 +50,7 @@ master.menu.anonymous.list-tool-record = Lista de Registro de Herramienta
 # master.menu.patron #######################################################
 master.menu.patron = Patron
 master.menu.patron.banner = Lista de Banner 
-
+master.menu.patron.create-banner = Crear Banner
 
 # master.menu.administrator ###################################################
 
@@ -131,6 +131,8 @@ master.menu.user-account.investor = Datos de Inversor
 master.menu.user-account.become-investor = Hazte inversor
 master.menu.user-account.become-bookkeeper = Hazte contable
 master.menu.user-account.bookkeeper = Datos de contable
+master.menu.user-account.become-patron = Hazte patron
+master.menu.user-account.patron = Datos de patron
 
 ﻿# master.footer ###############################################################
 

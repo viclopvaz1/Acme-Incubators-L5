@@ -16,7 +16,12 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="entrepreneur.investment-round.form.label.ticker" placeholder="SSS-YY-NNNNNN" path="ticker"/>
+	<jstl:if test="${command == 'create'}">
+			<acme:form-textbox code="entrepreneur.investment-round.form.label.ticker" placeholder="SSS-YY-NNNNNN" path="ticker"/>
+	</jstl:if>
+	<jstl:if test="${command != 'create'}">
+			<acme:form-textbox code="entrepreneur.investment-round.form.label.ticker" placeholder="SSS-YY-NNNNNN" path="ticker" readonly="true"/>
+	</jstl:if>
 	<acme:form-textbox code="entrepreneur.investment-round.form.label.title" path="title"/>
 	<acme:form-money code="entrepreneur.investment-round.form.label.amountMoney" path="amountMoney"/>
 	<acme:form-textarea code="entrepreneur.investment-round.form.label.description" path="description"/>

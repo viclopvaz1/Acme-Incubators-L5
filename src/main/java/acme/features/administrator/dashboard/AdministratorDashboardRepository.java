@@ -2,6 +2,7 @@
 package acme.features.administrator.dashboard;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -37,5 +38,17 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select status, count(a) from Application a group by a.status")
 	Collection<Object[]> ratioOfApplicationsGroupedByStatus();
+
+	//	@Query("select DATE(a.creationMoment), count(a) from Application a where a.status = 'accepted' and a.creationMoment >= ?1 group by DAY(a.creationMoment)")
+	//	Collection<Object[]> Accepted(Date moment);
+	//
+	//	@Query("select DATE(a.creationMoment), count(a) from Application a where a.status = 'pending' and a.creationMoment >= ?1 group by DAY(a.creationMoment)")
+	//	Collection<Object[]> Pending(Date moment);
+	//
+	//	@Query("select DATE(a.creationMoment), count(a) from Application a where a.status = 'rejected' and a.creationMoment >= ?1 group by DAY(a.creationMoment)")
+	//	Collection<Object[]> Rejected(Date moment);
+
+	@Query("select count(a) from Application a where a.status=?1 and a.creationMoment < ?2")
+	Integer getApplicationsByStatus(String status, Date moment);
 
 }

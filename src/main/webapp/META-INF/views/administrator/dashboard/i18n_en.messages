@@ -4,3 +4,4 @@ administrator.dashboard.form.message3 = Ratio of open-source technologies versus
 administrator.dashboard.form.message4 = Ratio of open-source tools versus closed-source tools.
 administrator.dashboard.form.message5 = Ratio of Investment Rounds grouped by kind.
 administrator.dashboard.form.message6 = Ratio of Application grouped by status.
+administrator.dashboard.form.message7 = A time series with the number of accepted, pending and rejected applications per day during the last 15 days.

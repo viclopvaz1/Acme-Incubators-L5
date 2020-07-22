@@ -83,10 +83,10 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		String[] CustomisationParameter;
 		Integer n = 0;
 
-		Collection<String> references = this.repository.allReferences();
+		Collection<String> tickers = this.repository.allTickers();
 
 		if (!errors.hasErrors("ticker")) {
-			errors.state(request, !references.contains(entity.getTicker()), "ticker", "entrepreneur.investment-round.form.error.ticker");
+			errors.state(request, !tickers.contains(entity.getTicker()), "ticker", "entrepreneur.investment-round.form.error.tickerRepeat");
 		}
 
 		if (!errors.hasErrors("title")) {

@@ -12,6 +12,7 @@ import acme.features.entrepreneur.investmentround.EntrepreneurInvestmentRoundRep
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -54,12 +55,15 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 	public Forum instantiate(final Request<Forum> request) {
 		assert request != null;
 		Forum result = new Forum();
+		Principal principal = request.getPrincipal();
 
 		InvestmentRound investmentRound;
 		int investmentRoundid = request.getModel().getInteger("investmentRoundid");
 
 		investmentRound = this.investmentRoundRepository.findOneById(investmentRoundid);
 		result.setInvestmentRound(investmentRound);
+
+		result.setAuthenticated(this.repository.findAuthenticatedById(principal.getActiveRoleId()));
 
 		return result;
 	}

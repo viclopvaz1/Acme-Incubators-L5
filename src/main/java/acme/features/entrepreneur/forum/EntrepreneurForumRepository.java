@@ -21,6 +21,7 @@ import acme.entities.configurations.Configuration;
 import acme.entities.forums.Forum;
 import acme.entities.messages.Message;
 import acme.entities.participations.Participation;
+import acme.framework.entities.Authenticated;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
@@ -40,5 +41,8 @@ public interface EntrepreneurForumRepository extends AbstractRepository {
 
 	@Query("select p from Participation p  where p.forum.id =?1")
 	Collection<Participation> findParticipationsByForumId(int id);
+
+	@Query("select a from Authenticated a where a.id = ?1")
+	Authenticated findAuthenticatedById(int id);
 
 }

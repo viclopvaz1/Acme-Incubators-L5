@@ -51,6 +51,6 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 	Entrepreneur findEntrepreneurById(int entrepreneurId);
 
 	@Query("select e.ticker from InvestmentRound e")
-	Collection<String> allReferences();
+	Collection<String> allTickers();
 
 }
