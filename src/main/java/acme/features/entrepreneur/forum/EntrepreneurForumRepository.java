@@ -43,6 +43,12 @@ public interface EntrepreneurForumRepository extends AbstractRepository {
 	Collection<Participation> findParticipationsByForumId(int id);
 
 	@Query("select a from Authenticated a where a.id = ?1")
-	Authenticated findAuthenticatedById(int id);
+	Authenticated findAuthenticatedById(int authenticatedId);
 
+	@Query("select a from Authenticated a where a.userAccount.id = ?1")
+	Authenticated findAuthenticatedByAccountId(int authenticatedId);
+
+	@Query("select count(a) from Forum a where a.investmentRound.id = ?1")
+
+	int findTotalForumByEntrepreneur(int entrepreneurId);
 }

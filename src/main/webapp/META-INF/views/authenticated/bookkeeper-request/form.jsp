@@ -24,7 +24,7 @@
 	<acme:form-submit test="${command == 'create'}" code="authenticated.bookkeeper-request.form.button.create" action="/authenticated/bookkeeper-request/create"/>
 </jstl:if>
 
-<jstl:if test="${numBookkeeperRequest == 1}">
+<jstl:if test="${numBookkeeperRequest > 1}">
 
 	<acme:message code="bookkeeper.error.exist"/>
 	</br>

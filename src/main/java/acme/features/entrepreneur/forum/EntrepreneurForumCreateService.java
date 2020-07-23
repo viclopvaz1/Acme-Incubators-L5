@@ -12,6 +12,7 @@ import acme.features.entrepreneur.investmentround.EntrepreneurInvestmentRoundRep
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
@@ -46,6 +47,10 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 		assert entity != null;
 		assert model != null;
 
+		Integer numForum = this.repository.findTotalForumByEntrepreneur(entity.getInvestmentRound().getId());
+
+		model.setAttribute("numForum", numForum);
+
 		model.setAttribute("investmentRoundid", entity.getInvestmentRound().getId());
 		request.unbind(entity, model, "title", "investmentRound");
 
@@ -63,7 +68,12 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 		investmentRound = this.investmentRoundRepository.findOneById(investmentRoundid);
 		result.setInvestmentRound(investmentRound);
 
-		result.setAuthenticated(this.repository.findAuthenticatedById(principal.getActiveRoleId()));
+		int authenticatedId = principal.getAccountId();
+		Authenticated creatorUser = this.repository.findAuthenticatedByAccountId(authenticatedId);
+		result.setAuthenticated(creatorUser);
+
+		//	result.setAuthenticated(result.getAuthenticated());
+		//	result.setAuthenticated(this.repository.findAuthenticatedById(principal.getActiveRoleId()));
 
 		return result;
 	}

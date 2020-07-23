@@ -46,7 +46,7 @@ public class AuthenticatedParticipationDeleteService implements AbstractDeleteSe
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "thread");
+		request.bind(entity, errors, "forum");
 
 	}
 
@@ -57,13 +57,13 @@ public class AuthenticatedParticipationDeleteService implements AbstractDeleteSe
 		assert errors != null;
 
 	}
-
 	@Override
 	public Participation findOne(final Request<Participation> request) {
 		Participation result;
 
 		result = new Participation();
 		result = this.repository.findParticipationById(request.getModel().getInteger("id"));
+
 		return result;
 	}
 
