@@ -94,7 +94,7 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		Collection<String> references = this.repository.allReferences();
 
 		if (!errors.hasErrors("ticker")) {
-			errors.state(request, !references.contains(entity.getTicker()), "ticker", "investor.application.form.error.ticker");
+			errors.state(request, !references.contains(entity.getTicker()), "ticker", "investor.application.form.error.tickerRepeat");
 		}
 
 		if (!errors.hasErrors("statement")) {

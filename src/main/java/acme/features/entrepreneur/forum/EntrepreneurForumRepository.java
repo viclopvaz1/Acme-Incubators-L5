@@ -21,6 +21,7 @@ import acme.entities.configurations.Configuration;
 import acme.entities.forums.Forum;
 import acme.entities.messages.Message;
 import acme.entities.participations.Participation;
+import acme.entities.roles.Investor;
 import acme.framework.entities.Authenticated;
 import acme.framework.repositories.AbstractRepository;
 
@@ -49,6 +50,8 @@ public interface EntrepreneurForumRepository extends AbstractRepository {
 	Authenticated findAuthenticatedByAccountId(int authenticatedId);
 
 	@Query("select count(a) from Forum a where a.investmentRound.id = ?1")
-
 	int findTotalForumByEntrepreneur(int entrepreneurId);
+
+	@Query("select a.investor from Application a where a.investmentRound.id = ?1")
+	Collection<Investor> findInvestorByInvestmentRoundId(int investmentRoundId);
 }

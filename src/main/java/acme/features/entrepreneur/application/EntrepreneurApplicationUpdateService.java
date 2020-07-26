@@ -6,10 +6,13 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
 import acme.entities.configurations.Configuration;
+import acme.entities.participations.Participation;
 import acme.entities.roles.Entrepreneur;
+import acme.features.authenticated.participation.AuthenticatedParticipationRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
@@ -17,7 +20,10 @@ import acme.framework.services.AbstractUpdateService;
 public class EntrepreneurApplicationUpdateService implements AbstractUpdateService<Entrepreneur, Application> {
 
 	@Autowired
-	EntrepreneurApplicationRepository repository;
+	EntrepreneurApplicationRepository		repository;
+
+	@Autowired
+	AuthenticatedParticipationRepository	participationRepository;
 
 
 	@Override
@@ -115,7 +121,17 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 		assert request != null;
 		assert entity != null;
 
+		Participation participation = new Participation();
+
+		if (entity.getStatus().equals("accepted") && this.repository.findTotalForumByEntrepreneur(entity.getInvestmentRound().getId()) == 1) {
+			Authenticated auth = this.participationRepository.findAuthenticatedByAccountId(entity.getInvestor().getUserAccount().getId());
+			participation.setAuthenticated(auth);
+			participation.setForum(this.repository.findForumByInvestmentRound(entity.getInvestmentRound().getId()));
+			this.participationRepository.save(participation);
+		}
+
 		this.repository.save(entity);
+
 	}
 
 }

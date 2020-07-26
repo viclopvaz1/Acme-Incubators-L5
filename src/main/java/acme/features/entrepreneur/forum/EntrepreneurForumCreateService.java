@@ -1,13 +1,18 @@
 
 package acme.features.entrepreneur.forum;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.configurations.Configuration;
 import acme.entities.forums.Forum;
 import acme.entities.investmentrounds.InvestmentRound;
+import acme.entities.participations.Participation;
 import acme.entities.roles.Entrepreneur;
+import acme.entities.roles.Investor;
+import acme.features.authenticated.participation.AuthenticatedParticipationRepository;
 import acme.features.entrepreneur.investmentround.EntrepreneurInvestmentRoundRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -24,6 +29,9 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 
 	@Autowired
 	EntrepreneurInvestmentRoundRepository	investmentRoundRepository;
+
+	@Autowired
+	AuthenticatedParticipationRepository	participationRepository;
 
 
 	@Override
@@ -116,8 +124,23 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 		assert request != null;
 		assert entity != null;
 
+		entity.setInvestmentRound(this.investmentRoundRepository.findOneById(request.getModel().getInteger("investmentRoundid")));
+
 		this.repository.save(entity);
 
+		Collection<Investor> investors = this.repository.findInvestorByInvestmentRoundId(request.getModel().getInteger("investmentRoundid"));
+
+		for (Investor i : investors) {
+			Participation participation = new Participation();
+			participation.setForum(entity);
+			participation.setAuthenticated(this.participationRepository.findAuthenticatedByAccountId(i.getUserAccount().getId()));
+			this.participationRepository.save(participation);
+		}
+
+		Participation creador = new Participation();
+		creador.setForum(entity);
+		creador.setAuthenticated(entity.getAuthenticated());
+		this.participationRepository.save(creador);
 	}
 
 }

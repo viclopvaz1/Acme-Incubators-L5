@@ -129,3 +129,88 @@ ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.la
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.lang.AssertionError
+WARN [org.hibernate.action.internal.UnresolvedEntityInsertActions] HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([acme.entities.forums.Forum#0])
+	Dependent entities: ([[acme.entities.participations.Participation#79]])
+	Non-nullable association(s): ([acme.entities.participations.Participation.forum])
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:370): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:151): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122): Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+WARN [org.hibernate.action.internal.UnresolvedEntityInsertActions] HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([acme.entities.forums.Forum#0])
+	Dependent entities: ([[acme.entities.participations.Participation#80]])
+	Non-nullable association(s): ([acme.entities.participations.Participation.forum])
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:370): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:151): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122): Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+WARN [org.hibernate.action.internal.UnresolvedEntityInsertActions] HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([acme.entities.forums.Forum#0])
+	Dependent entities: ([[acme.entities.participations.Participation#81]])
+	Non-nullable association(s): ([acme.entities.participations.Participation.forum])
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:370): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:151): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122): Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+WARN [org.hibernate.action.internal.UnresolvedEntityInsertActions] HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([acme.entities.forums.Forum#0])
+	Dependent entities: ([[acme.entities.participations.Participation#82]])
+	Non-nullable association(s): ([acme.entities.participations.Participation.forum])
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:370): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:151): org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+org.hibernate.action.internal.UnresolvedEntityInsertActions.checkNoUnresolvedActionsAfterOperation(UnresolvedEntityInsertActions.java:122): Not-null property references a transient value - transient instance must be saved before current operation : acme.entities.participations.Participation.forum -> acme.entities.forums.Forum
+ERROR [org.hibernate.internal.ExceptionMapperStandardImpl] HHH000346: Error during managed flush [Validation failed for classes [acme.entities.participations.Participation] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:541): Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction
+org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:81): Error while committing the transaction
+org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140): Validation failed for classes [acme.entities.participations.Participation] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+ERROR [org.hibernate.internal.ExceptionMapperStandardImpl] HHH000346: Error during managed flush [Validation failed for classes [acme.entities.participations.Participation] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:541): Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction
+org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:81): Error while committing the transaction
+org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140): Validation failed for classes [acme.entities.participations.Participation] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+ERROR [org.hibernate.internal.ExceptionMapperStandardImpl] HHH000346: Error during managed flush [Validation failed for classes [acme.entities.participations.Participation] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140): Validation failed for classes [acme.entities.participations.Participation] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+ERROR [org.hibernate.internal.ExceptionMapperStandardImpl] HHH000346: Error during managed flush [Validation failed for classes [acme.entities.participations.Participation] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:541): Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction
+org.hibernate.internal.ExceptionConverterImpl.convertCommitException(ExceptionConverterImpl.java:81): Error while committing the transaction
+org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140): Validation failed for classes [acme.entities.participations.Participation] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=authenticated, rootBeanClass=class acme.entities.participations.Participation, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-incubators/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
