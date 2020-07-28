@@ -16,3 +16,10 @@ patron.credit-card.label.yearExp = Year Exp:
 patron.credit-card.label.cvv = CVV:
 
 patron.credit-card.form.button.return = Return
+
+patron.credit-card.form.buttom.create = Create
+patron.credit-card.form.buttom.update = Update
+patron.credit-card.form.buttom.delete = Delete
+
+patron.credit-card.form.error.monthExp = The Month Expire must be greater than or equal to the current month, if it is the same year.
+patron.credit-card.form.error.yearExp = The Year Month must be greater than or equal to the current year.

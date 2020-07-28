@@ -43,6 +43,8 @@ public class PatronCreditCardShowService implements AbstractShowService<Patron, 
 		assert model != null;
 
 		request.unbind(entity, model, "holderName", "number", "brand", "monthExp", "yearExp", "cvv");
+		model.setAttribute("bannerid", entity.getBanner().getId());
+		model.setAttribute("finalmode", entity.getBanner().isFinalMode());
 	}
 
 	@Override
