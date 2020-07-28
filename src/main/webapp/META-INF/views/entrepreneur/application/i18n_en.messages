@@ -28,5 +28,5 @@ entrepreneur.application.form.button.update = Update
 entrepreneur.application.form.button.return = Return
 
 
-entrepreneur.investment-round.form.error.spamWordsReason = The Reason contains Spam Words
+entrepreneur.application.form.error.spamWordsReason = The Reason contains Spam Words
 entrepreneur.application.error.reason = For rejected you need one reason

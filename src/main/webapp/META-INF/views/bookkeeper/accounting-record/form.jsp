@@ -17,15 +17,15 @@
 
 <acme:form>
 		<acme:form-hidden path="investmentRoundId"/>
-<jstl:if test="${command!='update' }">
+
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.title" path="title"/>
-	<acme:form-moment code="bookkeeper.accounting-record.form.label.creationMoment" path="creationMoment"/>
-		<acme:form-money code="bookkeeper.accounting-record.form.label.moneyOffer" path="moneyOffer"/>
+	<acme:form-moment code="bookkeeper.accounting-record.form.label.creationMoment" path="creationMoment" readonly="true"/>
+		<acme:form-textarea code="bookkeeper.accounting-record.form.label.body" path="body"/>
 	
 		<jstl:if test="${command!='create' }">
-	<acme:form-textbox code="bookkeeper.accounting-record.form.label.investmentRound" path="investmentRound.ticker"/>
-	<acme:form-textbox code="bookkeeper.accounting-record.form.label.bookkeeper" path="bookkeeper.identity.fullName"/>
-		</jstl:if>
+	<acme:form-textbox code="bookkeeper.accounting-record.form.label.investmentRound" path="investmentRound.ticker" readonly="true"/>
+	<acme:form-textbox code="bookkeeper.accounting-record.form.label.bookkeeper" path="bookkeeper.identity.fullName" readonly="true"/>
+		
 	</jstl:if>
 		<acme:form-checkbox code="bookkeeper.accounting-record.form.label.status" path="status"/>
 		
@@ -35,7 +35,7 @@
 		code="bookkeeper.accounting-record.form.button.create" 
 		action="/bookkeeper/accounting-record/create"/>
 		
-	<acme:form-submit test="${command == 'show' && status ==false}"
+	<acme:form-submit test="${command == 'show' || command == 'update' && status ==false}"
 		code="bookkeeper.accounting-record.form.button.update" 
 		action="/bookkeeper/accounting-record/update"/>
 		

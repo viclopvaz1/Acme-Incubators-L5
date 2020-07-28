@@ -58,11 +58,11 @@ public class AuthenticatedParticipationListService implements AbstractListServic
 		forum = this.repository.findOneForumById(request.getModel().getInteger("forumId"));
 		Authenticated au = forum.getAuthenticated();
 
-		Participation participation = this.repository.findParticipationByAuthId(au.getId());
+		Collection<Participation> participation = this.repository.findParticipationByAuthId(au.getId());
 
 		result = this.repository.findAllParticipationByForumId(request.getModel().getInteger("forumId"));
 
-		result.remove(participation);
+		result.removeAll(participation);
 
 		return result;
 	}

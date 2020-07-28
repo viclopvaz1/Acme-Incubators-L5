@@ -555,7 +555,7 @@
         <property name="title" value="Title 1" />
         <property name="status" value="true" />
         <property name="creationMoment" value="2020/06/01 10:00" />
-        <property name="moneyOffer" value="€ 400" />
+        <property name="body" value="Ejemplo 1 " />
         <property name="bookkeeper" ref="bookkeeper1Bookkeeper" />
         <property name="investmentRound" ref="investmentRound02" />
     </bean>
@@ -564,7 +564,7 @@
         <property name="title" value="Title 2" />
         <property name="status" value="true" />
         <property name="creationMoment" value="2020/06/01 10:00" />
-        <property name="moneyOffer" value="€ 500" />
+        <property name="body" value="Ejemplo 2" />
         <property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
         <property name="investmentRound" ref="investmentRound02" />
     </bean>

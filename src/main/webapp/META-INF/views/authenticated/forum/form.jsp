@@ -25,15 +25,6 @@
 	<acme:form-submit test="${command == 'show' }" code="authenticated.forum.form.buttom.message" action="/authenticated/message/list-mine?forumid=${id}" method="get" />
 	<acme:form-submit test="${command == 'show' }" code="authenticated.forum.form.buttom.create.message" action="/authenticated/message/create?forumid=${id}" method="get" />
 
-<jstl:if test="${command == 'show' && isEntrepreneur}">
-<button type="button" onclick="javascript: pushReturnUrl('/authenticated/forum/show?id=${id}');
-	redirect('/authenticated/participation/list?forumId=${id}')" class="btn btn-primary">
-	<acme:message code="authenticated.forum.form.button.participation.list"/>
-	</button>
-<acme:form-submit
-	code="authenticated.participation.form.button.create" 
-	action="/authenticated/participation/create?forumId=${id}" method="get"/>
 	
-	</jstl:if>		
 	<acme:form-return code="authenticated.forum.form.button.return" />
 </acme:form>

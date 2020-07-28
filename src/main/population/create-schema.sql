@@ -2,8 +2,8 @@
     create table `accounting_record` (
        `id` integer not null,
         `version` integer not null,
+        `body` varchar(1024),
         `creation_moment` datetime(6),
-        `money_offer` varchar(1024),
         `status` bit not null,
         `title` varchar(255),
         `bookkeeper_id` integer not null,

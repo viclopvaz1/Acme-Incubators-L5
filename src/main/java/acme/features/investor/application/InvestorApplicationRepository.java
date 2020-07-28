@@ -41,6 +41,6 @@ public interface InvestorApplicationRepository extends AbstractRepository {
 	@Query("select c from Configuration c")
 	Configuration findConfiguration();
 
-	@Query("select e.ticker from InvestmentRound e")
+	@Query("select a.ticker from Application a")
 	Collection<String> allReferences();
 }

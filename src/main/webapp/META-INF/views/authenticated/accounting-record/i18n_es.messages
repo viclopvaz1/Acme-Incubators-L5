@@ -14,7 +14,7 @@
 
 authenticated.accounting-record.form.label.title = Titulo
 authenticated.accounting-record.form.label.investmentRound = Ticker de la Ronda de Inversiones
-authenticated.accounting-record.form.label.amountMoney = Cantidad de dinero
+authenticated.accounting-record.form.label.body = Cuerpo
 authenticated.accounting-record.form.label.creationMoment = Fecha de creación
 authenticated.accounting-record.form.label.bookkeeper = Bookkeeper
 authenticated.accounting-record.form.label.status = Estado

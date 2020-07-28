@@ -34,7 +34,7 @@ public interface AuthenticatedForumRepository extends AbstractRepository {
 	@Query("select c from Configuration c")
 	Configuration findConfiguration();
 
-	@Query("select p.forum from Participation p where p.authenticated.id = ?1")
+	@Query("select distinct p.forum from Participation p where p.authenticated.id = ?1")
 	Collection<Forum> findManyForumByAuthenticatedId(int activeRoleId);
 
 	@Query("select p.authenticated from Participation p where p.authenticated.userAccount.id = ?1")

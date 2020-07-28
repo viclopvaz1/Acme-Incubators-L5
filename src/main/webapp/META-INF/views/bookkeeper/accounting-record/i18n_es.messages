@@ -14,7 +14,7 @@
 
 bookkeeper.accounting-record.form.label.title = Titulo
 bookkeeper.accounting-record.form.label.investmentRound = Ticker de la Ronda de Inversiones
-bookkeeper.accounting-record.form.label.amountMoney = Cantidad de dinero
+bookkeeper.accounting-record.form.label.body = Cuerpo
 bookkeeper.accounting-record.form.label.creationMoment = Fecha de creación
 bookkeeper.accounting-record.form.label.bookkeeper = Bookeeper
 bookkeeper.accounting-record.form.label.status = Estado
@@ -25,5 +25,7 @@ bookkeeper.accounting-record.form.button.update = Actualizar
 
 bookkeeper.accounting-record.list.label.title = Titulo
 bookkeeper.accounting-record.list.label.creationMoment = Fecha de creación
+bookkeeper.accountingRecord.form.error.spamWordsTitle = El titulo contiene palabras de spam
+bookkeeper.accountingRecord.form.error.spamWordsBody = El cuerpo contiene palabras de spam
 
 bookkeeper.accounting-record.form.button.return= Volver

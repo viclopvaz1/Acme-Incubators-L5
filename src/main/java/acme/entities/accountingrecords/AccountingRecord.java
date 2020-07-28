@@ -38,7 +38,7 @@ public class AccountingRecord extends DomainEntity {
 
 	@NotBlank
 	@Column(length = 1024)
-	private String				moneyOffer;
+	private String				body;
 
 	@NotNull
 	@Valid

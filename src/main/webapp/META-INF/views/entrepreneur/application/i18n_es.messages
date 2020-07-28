@@ -28,5 +28,5 @@ entrepreneur.application.form.button.update = Actualizar y mandar justificación
 entrepreneur.application.form.button.return = Volver
 
 
-entrepreneur.investment-round.form.error.spamWordsReason = La Justificacion contiene Palabras de Spam
+entrepreneur.application.form.error.spamWordsReason = La Justificacion contiene Palabras de Spam
 entrepreneur.application.error.reason = Para rechazar necesitas una justificación

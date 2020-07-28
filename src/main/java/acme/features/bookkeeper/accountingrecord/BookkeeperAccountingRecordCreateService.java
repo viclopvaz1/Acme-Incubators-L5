@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.accountingrecords.AccountingRecord;
+import acme.entities.configurations.Configuration;
 import acme.entities.investmentrounds.InvestmentRound;
 import acme.entities.roles.Bookkeeper;
 import acme.features.authenticated.investmentround.AuthenticatedInvestmentRoundRepository;
@@ -49,7 +50,7 @@ public class BookkeeperAccountingRecordCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moneyOffer", "status", "creationMoment", "bookkeeper.identity.fullName");
+		request.unbind(entity, model, "title", "body", "status", "creationMoment", "bookkeeper.identity.fullName");
 		model.setAttribute("investmentRoundId", entity.getInvestmentRound().getId());
 
 	}
@@ -89,8 +90,52 @@ public class BookkeeperAccountingRecordCreateService implements AbstractCreateSe
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		Configuration configuration = this.repository.findConfiguration();
+		String[] CustomisationParameter;
+		Integer n = 0;
+		Double limitePalabrasSpam = Double.valueOf(entity.getTitle().split(" ").length) * configuration.getSpamThreshold() / 100.0;
 
+		if (!errors.hasErrors("title")) {
+
+			CustomisationParameter = configuration.getSpamWords().split(",");
+
+			for (String s : CustomisationParameter) {
+				String l = entity.getTitle().toLowerCase();
+				int indice = l.indexOf(s);
+				while (indice != -1) {
+					n++;
+					l = l.substring(indice + 1);
+					indice = l.indexOf(s);
+				}
+				errors.state(request, n <= limitePalabrasSpam, "title", "bookkeeper.accountingRecord.form.error.spamWordsTitle");
+
+				if (n > limitePalabrasSpam) {
+					break;
+				}
+			}
+
+			if (!errors.hasErrors("body")) {
+
+				CustomisationParameter = configuration.getSpamWords().split(",");
+
+				for (String s : CustomisationParameter) {
+					String l = entity.getTitle().toLowerCase();
+					int indice = l.indexOf(s);
+					while (indice != -1) {
+						n++;
+						l = l.substring(indice + 1);
+						indice = l.indexOf(s);
+					}
+					errors.state(request, n <= limitePalabrasSpam, "body", "bookkeeper.accountingRecord.form.error.spamWordsBody");
+
+					if (n > limitePalabrasSpam) {
+						break;
+					}
+				}
+			}
+		}
 	}
+	
 
 	@Override
 	public void create(final Request<AccountingRecord> request, final AccountingRecord entity) {

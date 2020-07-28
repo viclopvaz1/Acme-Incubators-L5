@@ -35,5 +35,17 @@
 	<acme:form-submit test="${command == 'create' }" code="entrepreneur.forum.form.button.create" action="/entrepreneur/forum/create" />
 	</jstl:if>
 	<acme:form-submit test="${command == 'delete' }" code="entrepreneur.forum.form.button.delete" action="/entrepreneur/forum/delete" />
+	
+	<jstl:if test="${command == 'show'}">
+<button type="button" onclick="javascript: pushReturnUrl('/authenticated/forum/show?id=${id}');
+	redirect('/authenticated/participation/list?forumId=${id}')" class="btn btn-primary">
+	<acme:message code="authenticated.forum.form.button.participation.list"/>
+	</button>
+<acme:form-submit
+	code="authenticated.participation.form.button.create" 
+	action="/authenticated/participation/create?forumId=${id}" method="get"/>
+	
+	</jstl:if>	
+	
 	<acme:form-return code="entrepreneur.forum.form.button.return" />
 </acme:form>

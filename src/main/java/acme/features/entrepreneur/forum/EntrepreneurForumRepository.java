@@ -52,6 +52,6 @@ public interface EntrepreneurForumRepository extends AbstractRepository {
 	@Query("select count(a) from Forum a where a.investmentRound.id = ?1")
 	int findTotalForumByEntrepreneur(int entrepreneurId);
 
-	@Query("select a.investor from Application a where a.investmentRound.id = ?1")
+	@Query("select a.investor from Application a where a.investmentRound.id = ?1 and a.status ='accepted'")
 	Collection<Investor> findInvestorByInvestmentRoundId(int investmentRoundId);
 }

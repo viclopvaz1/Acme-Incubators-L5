@@ -14,7 +14,7 @@
 
 entrepreneur.accounting-record.form.label.title = Titulo
 entrepreneur.accounting-record.form.label.investmentRound = Ticker de la Ronda de Inversiones
-entrepreneur.accounting-record.form.label.amountMoney = Cantidad de dinero
+entrepreneur.accounting-record.form.label.body = Cuerpo
 entrepreneur.accounting-record.form.label.creationMoment = Fecha de creación
 entrepreneur.accounting-record.form.label.bookkeeper = Bookkeeper
 entrepreneur.accounting-record.form.label.status = Estado
