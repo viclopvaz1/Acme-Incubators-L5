@@ -15,13 +15,14 @@
 entrepreneur.forum.form.label.title = Titulo
 entrepreneur.forum.form.label.ticker = Ticker de la Ronda de Inversion
 
-
+forum.error.exist= Ya existe un foro
 entrepreneur.forum.list.label.title = Titulo
 entrepreneur.forum.list.label.ticker = Ticker de la Ronda de Inversion
 
 entrepreneur.forum.form.button.return= Volver
 entrepreneur.forum.form.buttom.message = Mensajes
 
+entrepreneur.forum.form.error.spamWordsEntrepreneur = Contiene palabras de foro
 
 entrepreneur.forum.form.button.delete =Borrar Foro
 entrepreneur.forum.form.button.create = Crear Foro

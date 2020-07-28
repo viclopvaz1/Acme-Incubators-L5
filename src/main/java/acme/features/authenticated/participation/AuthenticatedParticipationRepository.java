@@ -53,6 +53,9 @@ public interface AuthenticatedParticipationRepository extends AbstractRepository
 	@Query("select p.forum.authenticated from Participation p where p.id = ?1")
 	Authenticated findCreatorUserByParticipationId(int participationId);
 
+	@Query("select p from Participation p where p.authenticated.id = ?1")
+	Participation findParticipationByAuthId(int authenticatedId);
+
 	@Query("select u from UserAccount u where u.username = ?1")
 	UserAccount findUserByName(String userName);
 

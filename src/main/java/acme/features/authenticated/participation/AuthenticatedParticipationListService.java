@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.forums.Forum;
 import acme.entities.participations.Participation;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -52,7 +53,16 @@ public class AuthenticatedParticipationListService implements AbstractListServic
 		assert request != null;
 
 		Collection<Participation> result;
+
+		Forum forum;
+		forum = this.repository.findOneForumById(request.getModel().getInteger("forumId"));
+		Authenticated au = forum.getAuthenticated();
+
+		Participation participation = this.repository.findParticipationByAuthId(au.getId());
+
 		result = this.repository.findAllParticipationByForumId(request.getModel().getInteger("forumId"));
+
+		result.remove(participation);
 
 		return result;
 	}

@@ -13,8 +13,10 @@ entrepreneur.forum.form.label.ticker = Investment Round Ticker
 
 entrepreneur.forum.list.label.title = Title
 entrepreneur.forum.list.label.ticker = Investment Round Ticker
+forum.error.exist= Already forum exists
 
 entrepreneur.forum.form.button.return = Return
 entrepreneur.forum.form.buttom.message = Messages
 entrepreneur.forum.form.button.delete = Delete Forum
 entrepreneur.forum.form.button.create = Create Forum
+entrepreneur.forum.form.error.spamWordsEntrepreneur = Contains Spam Words

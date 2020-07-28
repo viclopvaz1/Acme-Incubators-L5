@@ -24,7 +24,7 @@
 	     <acme:form-moment code="authenticated.message.form.label.creationMoment"
 	      path="creationMoment" 
 	      readonly="true"/>     
-		<acme:form-textarea code="authenticated.message.form.label.user.identity.fullName" path="authenticated" />
+		<acme:form-textarea code="authenticated.message.form.label.user.identity.fullName" path="authenticated.identity.fullName" />
 	</jstl:if>
 
 	<acme:form-textarea code="authenticated.message.form.label.body" path="body" />
