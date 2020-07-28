@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.banners.Banner;
+import acme.entities.creditcards.CreditCard;
 import acme.entities.roles.Patron;
+import acme.features.patron.creditcard.PatronCreditCardRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -15,7 +17,10 @@ import acme.framework.services.AbstractDeleteService;
 public class PatronBannerDeleteService implements AbstractDeleteService<Patron, Banner> {
 
 	@Autowired
-	PatronBannerRepository repository;
+	PatronBannerRepository		repository;
+
+	@Autowired
+	PatronCreditCardRepository	creditCardRepository;
 
 
 	@Override
@@ -70,6 +75,11 @@ public class PatronBannerDeleteService implements AbstractDeleteService<Patron, 
 	public void delete(final Request<Banner> request, final Banner entity) {
 		assert request != null;
 		assert entity != null;
+
+		if (this.creditCardRepository.findCreditCardByBannerId(entity.getId()) == 1) {
+			CreditCard cc = this.creditCardRepository.findOneByBannerId(entity.getId());
+			this.creditCardRepository.delete(cc);
+		}
 
 		this.repository.delete(entity);
 	}
