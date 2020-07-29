@@ -1,6 +1,7 @@
 
 package acme.entities.roles;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -26,6 +27,7 @@ public class Investor extends UserRole {
 	private String				sector;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				profile;
 
 	// Derived attributes -----------------------------------------------------

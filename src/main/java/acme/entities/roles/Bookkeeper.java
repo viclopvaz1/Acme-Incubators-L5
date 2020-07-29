@@ -1,6 +1,7 @@
 
 package acme.entities.roles;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -23,6 +24,7 @@ public class Bookkeeper extends UserRole {
 	private String				name;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				responsibilityStatement;
 
 	// Derived attributes -----------------------------------------------------

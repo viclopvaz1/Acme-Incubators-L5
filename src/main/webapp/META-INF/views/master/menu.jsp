@@ -58,6 +58,7 @@
 		
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.banner" action="/patron/banner/list-mine" />
+			<acme:menu-suboption code="master.menu.patron.create-banner" action="/patron/banner/create" />
 		
 		</acme:menu-option>
 
@@ -97,6 +98,8 @@
 			<acme:menu-suboption code="master.menu.administrator.create-technology-record" action="/administrator/technology-record/create" />
 			<acme:menu-suboption code="master.menu.administrator.list-technology-record" action="/administrator/technology-record/list" />
 
+            <acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.list.bookkeeper" action="/administrator/bookkeeper-request/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -114,6 +117,8 @@
 			<acme:menu-suboption code="master.menu.authenticated.list-challenge" action="/authenticated/challenge/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.authenticated.list-investment-round" action="/authenticated/investment-round/list" />
+	<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.authenticated.list-forum" action="/authenticated/forum/list-mine" />
 
 		</acme:menu-option>
 
@@ -129,8 +134,11 @@
 		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">
 			<acme:menu-suboption code="master.menu.entrepreneur.application.list-mine" action="/entrepreneur/application/list-mine" />
 		
-		<acme:menu-suboption code="master.menu.entrepreneur.investment-round.list" action="/entrepreneur/investment-round/list-mine" />
+				<acme:menu-suboption code="master.menu.entrepreneur.investment-round.create" action="/entrepreneur/investment-round/create" />
 		
+		
+		<acme:menu-suboption code="master.menu.entrepreneur.investment-round.list" action="/entrepreneur/investment-round/list-mine" />
+				
 		<acme:menu-suboption code="master.menu.entrepreneur.forum.list" action="/entrepreneur/forum/list-mine" />
 
 	</acme:menu-option>
@@ -138,7 +146,6 @@
 		<acme:menu-option code="master.menu.investor" access="hasRole('Investor')">
 			<acme:menu-suboption code="master.menu.investor.application.list-mine" action="/investor/application/list-mine" />
 		
-			<acme:menu-suboption code="master.menu.investor.forum.list-mine" action="/investor/forum/list-mine" />
 
 	</acme:menu-option>
 	
@@ -170,6 +177,23 @@
 				access="!hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update"
 				access="hasRole('Consumer')" />
+			<acme:menu-suboption code="master.menu.user-account.become-entrepreneur" action="/authenticated/entrepreneur/create"
+				access="!hasRole('Entrepreneur')" />
+			<acme:menu-suboption code="master.menu.user-account.entrepreneur" action="/authenticated/entrepreneur/update"
+				access="hasRole('Entrepreneur')" />
+			<acme:menu-suboption code="master.menu.user-account.become-investor" action="/authenticated/investor/create"
+				access="!hasRole('Investor')" />
+			<acme:menu-suboption code="master.menu.user-account.investor" action="/authenticated/investor/update"
+				access="hasRole('Investor')" />
+				
+			<acme:menu-suboption code="master.menu.user-account.become-bookkeeper" action="/authenticated/bookkeeper-request/create"
+				access="!hasRole('Bookkeeper')" />
+			<acme:menu-suboption code="master.menu.user-account.bookkeeper" action="/authenticated/bookkeeper/update" access="hasRole('Bookkeeper')" />
+		
+		<acme:menu-suboption code="master.menu.user-account.become-patron" action="/authenticated/patron/create"
+				access="!hasRole('Patron')" />
+			<acme:menu-suboption code="master.menu.user-account.patron" action="/authenticated/patron/update"
+				access="hasRole('Patron')" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()" />

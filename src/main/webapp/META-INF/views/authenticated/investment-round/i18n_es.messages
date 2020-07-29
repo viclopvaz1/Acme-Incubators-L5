@@ -26,4 +26,7 @@ authenticated.investment-round.form.label.status = Estado
 authenticated.investment-round.list.label.title = Titulo
 authenticated.investment-round.list.label.description = Description
 
+investor.investment-round.form.button.application = Crear Solicitud
+authenticated.investment-round.form.button.work-programme = Programa de Trabajo
+authenticated.investment-round.form.button.accounting-record = Registro de Contabilidad
 authenticated.investment-round.form.button.return= Volver

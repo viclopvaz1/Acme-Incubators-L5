@@ -22,5 +22,24 @@ entrepreneur.investment-round.form.label.status = Status
 entrepreneur.investment-round.list.label.title = Title
 entrepreneur.investment-round.list.label.description = Description
 
-entrepreneur.investment-round.form.button.accounting-record = Accounting Record
+
+entrepreneur.investment-round.form.button.create = Create
+entrepreneur.investment-round.form.button.update = Update
+entrepreneur.investment-round.form.button.delete = Delete
 entrepreneur.investment-round.form.button.return = Return
+
+
+entrepreneur.investment-round.form.button.create-work-programme = Create Work Programme
+entrepreneur.investment-round.form.button.work-programme = Work Programme
+entrepreneur.investment-round.form.button.accounting-record = Accounting Record
+
+
+entrepreneur.investment-round.form.error.hasApplication = You cannot delete a Investment Round if you have associated Applications
+entrepreneur.investment-round.form.error.spamWordsTitle = The title contains Spam Words
+entrepreneur.investment-round.form.error.spamWordsDescription = The description contains Spam Words
+entrepreneur.investment-round.form.error.ticker = The correct format of tickers is SSS-YY-NNNNNN. SSS, the first letters of Entreprenur Activity Sector. YY, two last digits of this year. NNNNNN, number betweeen 000000 and 999999
+entrepreneur.investment-round.form.error.sumBudget = The sum of the budget of the Work Programme must sum the Amount Money
+entrepreneur.investment-round.form.error.zoneEur = Only the euro, EUR or € currency is allowed
+entrepreneur.investment-round.form.error.tickerRepeat = Existing ticker, try another
+
+entrepreneur.investment-round.form.button.forum = Create forum

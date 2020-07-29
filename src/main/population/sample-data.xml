@@ -12,9 +12,8 @@
 
 	<bean id="configuration01" class="acme.entities.configurations.Configuration">
 		<property name="spamWords"
-			value=" viagra, sex, 
-			cialis, hard_core, cialis, nigeria, you’ve won, million dollar, 
-				millon de dolares, has ganado, explícito, sexo"></property>
+			value="sex,sexo,hardcore,viagra,cialis,Nigeria,you've won,has ganado,million dolar,un millon de dólares,explícito"
+			></property>
 		<property name="spamThreshold" value="2.50" />
 		<property name="sectors" value="Technology, Science, Arts, Business"></property>
 	</bean>
@@ -210,11 +209,11 @@
 
 	<bean id="Challenge01" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Desafio 1 " />
-		<property name="rookieGoal" value="400.0€" />
+		<property name="rookieGoal" value="Objetivo 1" />
 		<property name="deadline" value="2020/12/01 10:35" />
 		<property name="description" value="This is a example" />
-		<property name="averageGoal" value="700.0€" />
-		<property name="expertGoal" value="300.0€" />
+		<property name="averageGoal" value="Objetivo 2" />
+		<property name="expertGoal" value="Objetivo 3" />
 		<property name="rookieReward" value="300.0€" />
 		<property name="averageReward" value="1500.0€" />
 		<property name="expertReward" value="300.0€" />
@@ -224,11 +223,11 @@
 
 	<bean id="Challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Desafio 2" />
-		<property name="rookieGoal" value="400.0€" />
+		<property name="rookieGoal" value="Objetivo 1" />
 		<property name="deadline" value="2020/12/01 10:35" />
 		<property name="description" value="This is a example" />
-		<property name="averageGoal" value="700.0€" />
-		<property name="expertGoal" value="300.0€" />
+		<property name="averageGoal" value="Objetivo 2" />
+		<property name="expertGoal" value="Objetivo 3" />
 		<property name="rookieReward" value="200.0€" />
 		<property name="averageReward" value="1500.0€" />
 		<property name="expertReward" value="300.0€" />
@@ -505,6 +504,22 @@
         <property name="entrepreneur" ref="entrepreneur2Entrepreneur" />
         <property name="status" value="true" />
     </bean>
+    
+    <bean name="workProgramme01" class="acme.entities.workprogrammes.WorkProgramme">
+        <property name="title" value="Title 1" />
+        <property name="creationMoment" value="2020/06/06 00:00" />
+        <property name="deadline" value="2020/09/06 00:00" />
+        <property name="budget" value="€ 400" />
+        <property name="investmentRound" ref="investmentRound02" />
+    </bean>
+    
+    <bean name="workProgramme02" class="acme.entities.workprogrammes.WorkProgramme">
+        <property name="title" value="Title 2" />
+        <property name="creationMoment" value="2020/06/06 00:00" />
+        <property name="deadline" value="2020/09/06 00:00" />
+        <property name="budget" value="€ 600" />
+        <property name="investmentRound" ref="investmentRound03" />
+    </bean>
 
     <bean name="application1" class="acme.entities.applications.Application">
         <property name="ticker" value="SEC-20-000000" />
@@ -540,7 +555,7 @@
         <property name="title" value="Title 1" />
         <property name="status" value="true" />
         <property name="creationMoment" value="2020/06/01 10:00" />
-        <property name="moneyOffer" value="€ 400" />
+        <property name="body" value="Ejemplo 1 " />
         <property name="bookkeeper" ref="bookkeeper1Bookkeeper" />
         <property name="investmentRound" ref="investmentRound02" />
     </bean>
@@ -549,7 +564,7 @@
         <property name="title" value="Title 2" />
         <property name="status" value="true" />
         <property name="creationMoment" value="2020/06/01 10:00" />
-        <property name="moneyOffer" value="€ 500" />
+        <property name="body" value="Ejemplo 2" />
         <property name="bookkeeper" ref="bookkeeper2Bookkeeper" />
         <property name="investmentRound" ref="investmentRound02" />
     </bean>
@@ -557,11 +572,14 @@
     <bean name="forum01" class="acme.entities.forums.Forum">
         <property name="title" value="Title 1" />
         <property name="investmentRound" ref="investmentRound02" />
+      <property name="authenticated" ref="entrepreneur2Authenticated"/>
+        
     </bean>
     
     <bean name="forum02" class="acme.entities.forums.Forum">
         <property name="title" value="Title 2" />
         <property name="investmentRound" ref="investmentRound03" />
+             <property name="authenticated" ref="entrepreneur2Authenticated"/>
     </bean>
     
     <bean name="message01" class="acme.entities.messages.Message">
@@ -570,6 +588,7 @@
         <property name="tags" value="tag1, tag2" />
         <property name="body" value="Example" />
         <property name="forum" ref="forum01" />
+               <property name="authenticated" ref="entrepreneur2Authenticated"/>
     </bean>
     
     <bean name="message02" class="acme.entities.messages.Message">
@@ -580,6 +599,7 @@
         </property>
         <property name="body" value="Example" />
         <property name="forum" ref="forum01" />
+               <property name="authenticated" ref="entrepreneur2Authenticated"/>
     </bean>
     
     <bean name="message03" class="acme.entities.messages.Message">
@@ -588,6 +608,25 @@
         <property name="tags" value="tag1, tag2" />
         <property name="body" value="Example" />
         <property name="forum" ref="forum02" />
+               <property name="authenticated" ref="investor2Authenticathed"/>
     </bean>
     
+	
+	 <bean name="participation01" class="acme.entities.participations.Participation">
+		<property name="forum" ref="forum01"/>
+		<property name="authenticated" ref="investor2Authenticathed" />
+	</bean>
+		 <bean name="participation02" class="acme.entities.participations.Participation">
+		<property name="forum" ref="forum01"/>
+		<property name="authenticated" ref="entrepreneur2Authenticated" />
+	</bean>
+	
+	 <bean name="participation03" class="acme.entities.participations.Participation">
+		<property name="forum" ref="forum02"/>
+		<property name="authenticated" ref="investor2Authenticathed" />
+	</bean>
+		 <bean name="participation04" class="acme.entities.participations.Participation">
+		<property name="forum" ref="forum02"/>
+		<property name="authenticated" ref="entrepreneur2Authenticated" />
+	</bean>
 </beans>

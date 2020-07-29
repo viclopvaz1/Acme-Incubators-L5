@@ -29,4 +29,7 @@ public interface AuthenticatedInvestmentRoundRepository extends AbstractReposito
 	@Query("select i from InvestmentRound i where i.status =1")
 	Collection<InvestmentRound> findMany();
 
+	@Query("select count(ar) from AccountingRecord ar where ar.investmentRound.id = ?1")
+	int findAccountingRecordByInvestmentRoundId(int investmentRoundId);
+
 }

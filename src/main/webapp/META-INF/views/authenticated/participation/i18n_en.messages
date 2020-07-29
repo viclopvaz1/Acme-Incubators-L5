@@ -1,0 +1,32 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+authenticated.forum.list.label.title = Title
+
+authenticated.forum.form.label.title = Title
+authenticated.forum.form.label.moment = Date
+
+authenticated.forum.form.button.return = Return
+authenticated.participation.form.button.return = Return
+authenticated.forum.form.button.message = Messages
+authenticated.participation.form.label.authenticated= User's name
+authenticated.participation.form.button.create= Add
+authenticated.participation.form.button.delete= Delete
+authenticated.participation.list.label.authenticated = User's name
+authenticated.participant.error.name= The user is already added
+
+
+authenticated.forum.form.label.messages.moment = Messages moment
+authenticated.forum.form.label.messages.body = Body
+authenticated.forum.form.label.messages.title= Title
+authenticated.forum.form.label.messages.author = User
+authenticated.forum.form.label.messages = Messages
+authenticated.forum.form.label.messages.tags =Tags

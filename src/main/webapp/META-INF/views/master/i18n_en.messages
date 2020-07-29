@@ -49,6 +49,7 @@ master.menu.anonymous.list-tool-record = List Tool Record
 # master.menu.patron #######################################################
 master.menu.patron = Patron
 master.menu.patron.banner = Banner List 
+master.menu.patron.create-banner = Create Banner
 
 # master.menu.administrator ###################################################
 
@@ -74,6 +75,8 @@ master.menu.administrator.list-tool-record = List Tool Record
 master.menu.administrator.create-notice = Create Notice
 master.menu.administrator.inquirie = Inquirie List
 master.menu.administrator.create-inquirie = Create Inquirie
+master.menu.administrator.list.bookkeeper = Bookkeeper list
+
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated = Authenticated
@@ -84,6 +87,7 @@ master.menu.authenticated.list-inquirie = List Inquiries
 master.menu.authenticated.list-overture = List Overtures
 master.menu.authenticated.list-challenge = List Challenges
 master.menu.authenticated.list-investment-round = List Investment Round
+master.menu.authenticated.list-forum = List Forums
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
@@ -92,6 +96,7 @@ master.menu.provider.favourite-link = Favourite link
 # master.menu.entrepreneur ##########################################################
 master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investment-round.list = List of Investment Round
+master.menu.entrepreneur.investment-round.create = Create Investment Round
 master.menu.entrepreneur.forum.list = List of Forums
 master.menu.entrepreneur.application.list-mine = List applications
 
@@ -120,6 +125,14 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.entrepreneur = Entrepreneur data
+master.menu.user-account.become-entrepreneur = Become a entrepreneur
+master.menu.user-account.investor = Investor data
+master.menu.user-account.become-investor = Become a investor
+master.menu.user-account.become-bookkeeper = Become a bookkeeper
+master.menu.user-account.bookkeeper = Bookkeeper data
+master.menu.user-account.become-patron = Become a patron
+master.menu.user-account.patron = Patron data
 
 # master.footer ###############################################################
 

@@ -15,10 +15,37 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-	<acme:form-textbox code="entrepreneur.forum.form.label.title" path="title"/>
-	<acme:form-textbox code="entrepreneur.forum.form.label.ticker" path="investmentRound.ticker"/>
+<acme:form>
+	<acme:form-hidden path="investmentRoundid"/>
 
-	<acme:form-submit code="entrepreneur.forum.form.buttom.message" action="/entrepreneur/message/list-mine?forumid=${id}"  method="get"/>
-	<acme:form-return code="entrepreneur.forum.form.button.return"/>
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="entrepreneur.forum.form.label.ticker" path="investmentRound.ticker" readonly="true" />
+	</jstl:if>
+
+	<acme:form-submit test="${command == 'show' }" code="entrepreneur.forum.form.buttom.message" action="/entrepreneur/message/list-mine?forumid=${id}" method="get" />
+
+	<acme:form-submit test="${command == 'show' }" code="entrepreneur.forum.form.button.delete" action="/entrepreneur/forum/delete" />
+<jstl:if test="${numForum == 1}">
+	<acme:message code="forum.error.exist"/>
+	</br>
+	</jstl:if>
+
+<jstl:if test="${numForum == 0}">
+	<acme:form-textbox code="entrepreneur.forum.form.label.title" path="title" />
+	<acme:form-submit test="${command == 'create' }" code="entrepreneur.forum.form.button.create" action="/entrepreneur/forum/create" />
+	</jstl:if>
+	<acme:form-submit test="${command == 'delete' }" code="entrepreneur.forum.form.button.delete" action="/entrepreneur/forum/delete" />
+	
+	<jstl:if test="${command == 'show'}">
+<button type="button" onclick="javascript: pushReturnUrl('/authenticated/forum/show?id=${id}');
+	redirect('/authenticated/participation/list?forumId=${id}')" class="btn btn-primary">
+	<acme:message code="authenticated.forum.form.button.participation.list"/>
+	</button>
+<acme:form-submit
+	code="authenticated.participation.form.button.create" 
+	action="/authenticated/participation/create?forumId=${id}" method="get"/>
+	
+	</jstl:if>	
+	
+	<acme:form-return code="entrepreneur.forum.form.button.return" />
 </acme:form>

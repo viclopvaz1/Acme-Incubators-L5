@@ -42,7 +42,7 @@ public class BookkeeperAccountingRecordShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "status", "creationMoment", "moneyOffer", "bookkeeper.identity.fullName", "investmentRound.ticker");
+		request.unbind(entity, model, "title", "status", "creationMoment", "body", "bookkeeper.identity.fullName", "investmentRound.ticker");
 	}
 
 	@Override

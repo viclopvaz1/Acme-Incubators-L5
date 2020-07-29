@@ -25,3 +25,5 @@ patron.banner.form.button.delete = Delete
 
 patron.banner.form.button.credit-card = Credit Card
 patron.banner.form.button.create-credit-card = Create Credit Card
+
+patron.banner.form.error.spamWordsPatron = Spam Words

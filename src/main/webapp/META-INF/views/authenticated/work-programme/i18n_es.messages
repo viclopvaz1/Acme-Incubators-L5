@@ -1,0 +1,22 @@
+  
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+authenticated.work-programme.form.label.title = Titulo
+authenticated.work-programme.form.label.creationMoment = Fecha Creacion
+authenticated.work-programme.form.label.deadline = Fecha Limite
+authenticated.work-programme.form.label.budget = Presupuesto
+authenticated.work-programme.form.label.investmentRound = Ticker de la Ronda de Inversiones
+
+authenticated.work-programme.list.label.title = Titulo
+authenticated.work-programme.list.label.creationMoment = Fecha Creacion
+
+authenticated.work-programme.form.button.return = Volver
