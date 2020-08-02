@@ -43,6 +43,8 @@ public class EntrepreneurWorkProgrammeShowService implements AbstractShowService
 		assert model != null;
 
 		request.unbind(entity, model, "title", "creationMoment", "deadline", "budget", "investmentRound.ticker");
+		model.setAttribute("investmentRoundid", entity.getInvestmentRound().getId());
+		model.setAttribute("status", entity.getInvestmentRound().isStatus());
 	}
 
 	@Override

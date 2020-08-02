@@ -35,24 +35,18 @@
 		<acme:form-checkbox code="entrepreneur.investment-round.form.label.status" path="status"/>
 	</jstl:if>
 	
-	<acme:form-submit test="${command == 'show' && status == false}"
+	<acme:form-submit test="${(command == 'show' || command == 'update') && status == false}"
 		code="entrepreneur.investment-round.form.button.update" 
 		action="/entrepreneur/investment-round/update"/>
-	<acme:form-submit test="${command == 'show' && numApplication == 0}"
+	<acme:form-submit test="${(command == 'show' || command == 'delete') && numApplication == 0}"
 		code="entrepreneur.investment-round.form.button.delete" 
 		action="/entrepreneur/investment-round/delete"/>
 	<acme:form-submit test="${command == 'create'}"
 		code="entrepreneur.investment-round.form.button.create" 
 		action="/entrepreneur/investment-round/create"/>
-	<acme:form-submit test="${command == 'update' }"
-		code="entrepreneur.investment-round.form.button.update" 
-		action="/entrepreneur/investment-round/update"/>
-	<acme:form-submit test="${command == 'delete' && numApplication == 0}"
-		code="entrepreneur.investment-round.form.button.delete" 
-		action="/entrepreneur/investment-round/delete"/>
 	
 	<acme:form-submit test="${command == 'show' || command == 'update' }" code="entrepreneur.investment-round.form.button.work-programme" action="/entrepreneur/work-programme/list-mine?investmentRoundid=${id}"  method="get"/>
-	<acme:form-submit test="${(command == 'show' || command == 'update') && status == false }" code="entrepreneur.investment-round.form.button.create-work-programme" action="/entrepreneur/work-programme/create?investmentRoundid=${id}" method="get"/>
+	<acme:form-submit test="${(command == 'show' || command == 'update') && status == false }" code="entrepreneur.investment-round.form.button.create-work-programme" action="/entrepreneur/work-programme/create?investmentRoundid=${id}&status=${status}" method="get"/>
 	<acme:form-submit test="${(command == 'show' || command == 'update') && status == true && numAccountingRecord > 0}" code="entrepreneur.investment-round.form.button.accounting-record" action="/entrepreneur/accounting-record/list-mine?investmentRoundid=${id}"  method="get"/>
 	<acme:form-submit test="${(command == 'show' || command == 'update') && status == true}" code="entrepreneur.investment-round.form.button.forum" action="/entrepreneur/forum/create?investmentRoundid=${id}"  method="get"/>
 	<acme:form-return code="entrepreneur.investment-round.form.button.return"/>

@@ -14,7 +14,10 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
+<acme:form-hidden path="status"/>
+<acme:form-hidden path="investmentRoundid"/>
 
+<jstl:if test="${status == false || command == 'create' || command == 'update'}">
 <acme:form>
 	<acme:form-textbox code="entrepreneur.work-programme.form.label.title" path="title"/>
 	<jstl:if test="${command != 'create'}">
@@ -50,3 +53,18 @@
 	
 	<acme:form-return code="entrepreneur.work-programme.form.button.return"/>
 </acme:form>
+</jstl:if>
+
+
+<jstl:if test="${status == true}">
+<acme:form  readonly="true">
+	<acme:form-textbox code="entrepreneur.work-programme.form.label.title" path="title"/>
+	<acme:form-moment code="entrepreneur.work-programme.form.label.creationMoment" path="creationMoment"/>
+	<acme:form-moment code="entrepreneur.work-programme.form.label.deadline" path="deadline"/>
+	<acme:form-money code="entrepreneur.work-programme.form.label.budget" path="budget"/>
+	<acme:form-textbox code="entrepreneur.work-programme.form.label.investmentRound" path="investmentRound.ticker"/>
+	
+	
+	<acme:form-return code="entrepreneur.work-programme.form.button.return"/>
+</acme:form>
+</jstl:if>

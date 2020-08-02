@@ -28,10 +28,8 @@
 	<acme:form-hidden path="bannerid"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="patron.credit-card.form.buttom.create" action="create"/>
-	<acme:form-submit test="${command == 'show'}" code="patron.credit-card.form.buttom.update" action="update"/>
-	<acme:form-submit test="${command == 'show'}" code="patron.credit-card.form.buttom.delete" action="delete"/>
-	<acme:form-submit test="${command == 'update'}" code="patron.credit-card.form.buttom.update" action="update"/>
-	<acme:form-submit test="${command == 'delete'}" code="patron.credit-card.form.buttom.delete" action="delete"/>
+	<acme:form-submit test="${command == 'show' || command == 'update'}" code="patron.credit-card.form.buttom.update" action="update"/>
+	<acme:form-submit test="${command == 'show' || command == 'delete'}" code="patron.credit-card.form.buttom.delete" action="delete"/>
 	
 	<acme:form-return code="patron.credit-card.form.button.return"/>
 

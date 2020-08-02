@@ -55,7 +55,7 @@ public class BookkeeperAccountingRecordUpdateService implements AbstractUpdateSe
 		assert model != null;
 
 		request.unbind(entity, model, "title", "status", "creationMoment");
-		request.unbind(entity, model, "bookkeeper.identity.fullName", "investmentRound.title", "moneyOffer");
+		request.unbind(entity, model, "bookkeeper.identity.fullName", "investmentRound.title", "body");
 
 	}
 

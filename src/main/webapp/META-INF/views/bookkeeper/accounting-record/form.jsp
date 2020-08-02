@@ -35,7 +35,7 @@
 		code="bookkeeper.accounting-record.form.button.create" 
 		action="/bookkeeper/accounting-record/create"/>
 		
-	<acme:form-submit test="${command == 'show' || command == 'update' && status ==false}"
+	<acme:form-submit test="${(command == 'show' || command == 'update') && status == false}"
 		code="bookkeeper.accounting-record.form.button.update" 
 		action="/bookkeeper/accounting-record/update"/>
 		
