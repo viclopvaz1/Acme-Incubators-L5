@@ -110,6 +110,7 @@ public class BookkeeperAccountingRecordCreateService implements AbstractCreateSe
 				errors.state(request, n <= limitePalabrasSpam, "title", "bookkeeper.accountingRecord.form.error.spamWordsTitle");
 
 				if (n > limitePalabrasSpam) {
+					n = 0;
 					break;
 				}
 			}
@@ -135,7 +136,6 @@ public class BookkeeperAccountingRecordCreateService implements AbstractCreateSe
 			}
 		}
 	}
-	
 
 	@Override
 	public void create(final Request<AccountingRecord> request, final AccountingRecord entity) {

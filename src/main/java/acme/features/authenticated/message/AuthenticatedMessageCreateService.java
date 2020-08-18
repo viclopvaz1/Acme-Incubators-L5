@@ -103,6 +103,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 				errors.state(request, n <= limitePalabrasSpam, "title", "authenticated.forum.form.error.spamWordsAuthenticated");
 
 				if (n > limitePalabrasSpam) {
+					n = 0;
 					break;
 				}
 			}
@@ -123,6 +124,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 				errors.state(request, n <= limitePalabrasSpam, "body", "authenticated.forum.form.error.spamWordsAuthenticated");
 
 				if (n > limitePalabrasSpam) {
+					n = 0;
 					break;
 				}
 			}

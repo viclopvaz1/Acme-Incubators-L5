@@ -100,6 +100,7 @@ public class BookkeeperAccountingRecordUpdateService implements AbstractUpdateSe
 				errors.state(request, n <= limitePalabrasSpam, "title", "bookkeeper.accountingRecord.form.error.spamWordsTitle");
 
 				if (n > limitePalabrasSpam) {
+					n = 0;
 					break;
 				}
 			}

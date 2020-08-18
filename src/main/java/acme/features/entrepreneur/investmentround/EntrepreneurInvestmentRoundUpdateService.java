@@ -110,6 +110,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 				errors.state(request, n <= limitePalabrasSpam, "title", "entrepreneur.investment-round.form.error.spamWordsTitle");
 
 				if (n > limitePalabrasSpam) {
+					n = 0;
 					break;
 				}
 			}
