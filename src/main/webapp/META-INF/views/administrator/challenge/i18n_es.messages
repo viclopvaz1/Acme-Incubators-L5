@@ -33,5 +33,5 @@ administrator.challenge.form.error.zoneEurG = Solo se permite la moneda euro, EU
 administrator.challenge.form.error.zoneEurS = Solo se permite la moneda euro, EUR o €
 administrator.challenge.form.error.zoneEurB = Solo se permite la moneda euro, EUR o €
 
-administrator.challenge.form.error.goldBsilver = El objetivo de plata debe ser más bajo que el de oro
-administrator.challenge.form.error.silverBbronze = El objetivo de bronce debe ser más bajo que el de plata
+administrator.challenge.form.error.expertBaverage = La recompensa de promedio debe ser más bajo que la de experto
+administrator.challenge.form.error.averageBrookie = La recompensa de principiate debe ser más bajo que la de promedio

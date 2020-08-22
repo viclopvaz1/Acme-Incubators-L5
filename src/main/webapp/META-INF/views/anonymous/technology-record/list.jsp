@@ -5,6 +5,6 @@
 
 <acme:list>
 	<acme:list-column code="anonymous.technology-record.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.technology-record.list.label.name" path="name" width="60%"/>
+	<acme:list-column code="anonymous.technology-record.list.label.sector" path="sector" width="60%"/>
 
 </acme:list>

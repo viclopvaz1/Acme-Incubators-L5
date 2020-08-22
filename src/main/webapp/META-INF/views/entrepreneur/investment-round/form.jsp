@@ -48,6 +48,6 @@
 	<acme:form-submit test="${command == 'show' || command == 'update' }" code="entrepreneur.investment-round.form.button.work-programme" action="/entrepreneur/work-programme/list-mine?investmentRoundid=${id}"  method="get"/>
 	<acme:form-submit test="${(command == 'show' || command == 'update') && status == false }" code="entrepreneur.investment-round.form.button.create-work-programme" action="/entrepreneur/work-programme/create?investmentRoundid=${id}&status=${status}" method="get"/>
 	<acme:form-submit test="${(command == 'show' || command == 'update') && status == true && numAccountingRecord > 0}" code="entrepreneur.investment-round.form.button.accounting-record" action="/entrepreneur/accounting-record/list-mine?investmentRoundid=${id}"  method="get"/>
-	<acme:form-submit test="${(command == 'show' || command == 'update') && status == true}" code="entrepreneur.investment-round.form.button.forum" action="/entrepreneur/forum/create?investmentRoundid=${id}"  method="get"/>
+	<acme:form-submit test="${(command == 'show' || command == 'update') && status == true && numForum == 0}" code="entrepreneur.investment-round.form.button.forum" action="/entrepreneur/forum/create?investmentRoundid=${id}"  method="get"/>
 	<acme:form-return code="entrepreneur.investment-round.form.button.return"/>
 </acme:form>

@@ -23,3 +23,4 @@ patron.credit-card.form.buttom.delete = Borrar
 
 patron.credit-card.form.error.monthExp = El mes de caducidad debe ser mayor o igual al mes actual, si es el mismo año.
 patron.credit-card.form.error.yearExp = El año de caducidad debe ser mayor o igual al año actual.
+patron.credit-card.form.error.spamWordsPatron = Contiene palabras de Spam

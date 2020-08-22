@@ -21,7 +21,7 @@
 		<acme:form-moment code="entrepreneur.application.form.label.creationMoment" path="creationMoment" readonly="true"/>
 		<acme:form-textbox code="entrepreneur.application.form.label.statement" path="statement" readonly="true"/>
 		<acme:form-textbox code="entrepreneur.application.form.label.moneyOffer" path="moneyOffer" readonly="true"/>
-		<acme:form-textbox code="entrepreneur.application.form.label.ticker" path="investmentRound.ticker" readonly="true"/>
+		<acme:form-textbox code="entrepreneur.application.form.label.tickerInvestmentRound" path="investmentRound.ticker" readonly="true"/>
 		<acme:form-textbox code="entrepreneur.application.form.label.investor" path="investor.identity.fullName" readonly="true"/>
 	</jstl:if>
 	
@@ -32,7 +32,7 @@
     		<option value="accepted" <jstl:if test="${status =='accepted'}">selected</jstl:if>>accepted</option>
     		<option value="rejected" <jstl:if test="${status =='rejected'}">selected</jstl:if>>rejected</option>
 	</acme:form-select>
-	<jstl:if test="${status!='pending' || command=='update'}">
+	<jstl:if test="${status=='rejected' || command=='update'}">
 		<acme:form-textarea code="entrepreneur.application.form.label.reason" path="reason"/>
 	</jstl:if>
 	<acme:form-submit test="${command == 'show' && status=='pending'}" code="entrepreneur.application.form.button.status" action="/entrepreneur/application/update?id=${id}" method = "get"/>

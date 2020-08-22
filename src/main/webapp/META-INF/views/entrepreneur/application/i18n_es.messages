@@ -14,7 +14,7 @@ entrepreneur.application.form.label.moneyOffer = Oferta de dinero
 entrepreneur.application.form.label.creationMoment = Fecha de creacion
 entrepreneur.application.form.label.statement = Declaración
 entrepreneur.application.form.label.investor = Inversor
-entrepreneur.application.form.label.ticker = Ticker de la Ronda de Inversion
+entrepreneur.application.form.label.tickerInvestmentRound = Ticker de la Ronda de Inversion
 entrepreneur.application.form.label.status = Estado
 entrepreneur.application.form.label.reason = Justificación
 

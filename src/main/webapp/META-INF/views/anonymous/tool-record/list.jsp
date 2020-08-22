@@ -5,6 +5,6 @@
 
 <acme:list>
 	<acme:list-column code="anonymous.tool-record.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="anonymous.tool-record.list.label.name" path="name" width="60%"/>
+	<acme:list-column code="anonymous.tool-record.list.label.sector" path="sector" width="60%"/>
 
 </acme:list>

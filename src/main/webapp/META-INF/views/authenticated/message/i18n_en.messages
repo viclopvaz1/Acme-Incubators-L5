@@ -20,3 +20,6 @@ authenticated.message.form.label.user.identity.fullName = Username
 authenticated.message.form.button.create = Create message
 
 authenticated.message.form.button.return = Return
+
+authenticated.message.form.error.spamWordsAuthenticated = Contains spam words
+authenticated.message.error.check = You must confirm

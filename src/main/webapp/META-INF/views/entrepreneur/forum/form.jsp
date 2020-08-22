@@ -25,15 +25,9 @@
 	<acme:form-submit test="${command == 'show' }" code="entrepreneur.forum.form.buttom.message" action="/entrepreneur/message/list-mine?forumid=${id}" method="get" />
 
 	<acme:form-submit test="${command == 'show' }" code="entrepreneur.forum.form.button.delete" action="/entrepreneur/forum/delete" />
-<jstl:if test="${numForum == 1}">
-	<acme:message code="forum.error.exist"/>
-	</br>
-	</jstl:if>
 
-<jstl:if test="${numForum == 0}">
 	<acme:form-textbox code="entrepreneur.forum.form.label.title" path="title" />
 	<acme:form-submit test="${command == 'create' }" code="entrepreneur.forum.form.button.create" action="/entrepreneur/forum/create" />
-	</jstl:if>
 	<acme:form-submit test="${command == 'delete' }" code="entrepreneur.forum.form.button.delete" action="/entrepreneur/forum/delete" />
 	
 	<jstl:if test="${command == 'show'}">

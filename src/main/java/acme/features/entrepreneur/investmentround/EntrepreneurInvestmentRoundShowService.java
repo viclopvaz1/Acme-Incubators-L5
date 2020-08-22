@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.investmentrounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
+import acme.features.entrepreneur.forum.EntrepreneurForumRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Principal;
@@ -15,7 +16,10 @@ import acme.framework.services.AbstractShowService;
 public class EntrepreneurInvestmentRoundShowService implements AbstractShowService<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	EntrepreneurInvestmentRoundRepository repository;
+	EntrepreneurInvestmentRoundRepository	repository;
+
+	@Autowired
+	EntrepreneurForumRepository				forumRepository;
 
 
 	@Override
@@ -47,6 +51,9 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 		int numApplication = this.repository.findApplicationByInvestmentRoundId(id);
 		model.setAttribute("numAccountingRecord", numAccountingRecord);
 		model.setAttribute("numApplication", numApplication);
+		Integer numForum = this.forumRepository.findTotalForumByEntrepreneur(entity.getId());
+
+		model.setAttribute("numForum", numForum);
 		request.unbind(entity, model, "title", "description", "amountMoney", "creationMoment", "round", "ticker", "moreInfo", "entrepreneur.identity.fullName", "status");
 	}
 

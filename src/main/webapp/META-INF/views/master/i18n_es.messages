@@ -112,7 +112,7 @@ master.menu.investor.application.list-mine =  Lista de Solicitudes
 master.menu.investor.forum.list-mine = Lista de Foros
 
 # master.menu.bookkeeper ##########################################################
-master.menu.bookkeeper= Bookkeeper
+master.menu.bookkeeper= Contable
 master.menu.bookkeeper.accounting-record.list-mine =  Lista de Registro de Contabilidad
 master.menu.bookkeeper.investment-round.list-mine =  Lista de Rondas de Inversiones con Registro de Contabilidad
 master.menu.bookkeeper.investment-round.list-no-mine =  Lista de Rondas de Inversiones sin Registro de Contabilidad

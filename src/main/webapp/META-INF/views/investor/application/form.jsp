@@ -24,8 +24,12 @@
 	<acme:form-textbox code="investor.application.form.label.statement" path="statement"/>
 	<acme:form-textbox code="investor.application.form.label.moneyOffer" path="moneyOffer"/>
 	<jstl:if test="${command != 'create'}">
-		<acme:form-textbox code="investor.application.form.label.ticker" path="investmentRound.ticker" readonly="true"/>
+		<acme:form-textbox code="investor.application.form.label.tickerInvestmentRound" path="investmentRound.ticker" readonly="true"/>
 		<acme:form-textbox code="investor.application.form.label.investor" path="investor.identity.fullName" readonly="true"/>
+		<acme:form-textbox code="investor.application.form.label.status" path="status" readonly="true"/>
+		<jstl:if test="${status=='rejected'}">
+			<acme:form-textarea code="investor.application.form.label.reason" path="reason" readonly="true"/>
+		</jstl:if>
 	</jstl:if>
 	
 	<acme:form-submit test="${command == 'create'}"

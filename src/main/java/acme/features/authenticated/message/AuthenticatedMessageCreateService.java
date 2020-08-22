@@ -83,6 +83,11 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		boolean checker = request.getModel().getString("check").equals("true");
+
+		errors.state(request, checker, "check", "authenticated.message.error.check");
+
 		Configuration configuration = this.repository.findConfiguration();
 		String[] CustomisationParameter;
 		Integer n = 0;
@@ -100,7 +105,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 					l = l.substring(indice + 1);
 					indice = l.indexOf(s);
 				}
-				errors.state(request, n <= limitePalabrasSpam, "title", "authenticated.forum.form.error.spamWordsAuthenticated");
+				errors.state(request, n <= limitePalabrasSpam, "title", "authenticated.message.form.error.spamWordsAuthenticated");
 
 				if (n > limitePalabrasSpam) {
 					n = 0;
@@ -121,7 +126,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 					l = l.substring(indice + 1);
 					indice = l.indexOf(s);
 				}
-				errors.state(request, n <= limitePalabrasSpam, "body", "authenticated.forum.form.error.spamWordsAuthenticated");
+				errors.state(request, n <= limitePalabrasSpam, "body", "authenticated.message.form.error.spamWordsAuthenticated");
 
 				if (n > limitePalabrasSpam) {
 					n = 0;
@@ -142,7 +147,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 					l = l.substring(indice + 1);
 					indice = l.indexOf(s);
 				}
-				errors.state(request, n <= limitePalabrasSpam, "tags", "authenticated.forum.form.error.spamWordsAuthenticated");
+				errors.state(request, n <= limitePalabrasSpam, "tags", "authenticated.message.form.error.spamWordsAuthenticated");
 
 				if (n > limitePalabrasSpam) {
 					break;

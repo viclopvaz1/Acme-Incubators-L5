@@ -19,3 +19,6 @@ authenticated.message.list.label.creationMoment = Fecha Creacion
 authenticated.message.form.label.check = Confirmar
 authenticated.message.form.button.return = Volver
 authenticated.message.form.button.create = Enviar mensaje
+
+authenticated.message.form.error.spamWordsAuthenticated = Contiene palabras de Spam
+authenticated.message.error.check = Debes confirmar

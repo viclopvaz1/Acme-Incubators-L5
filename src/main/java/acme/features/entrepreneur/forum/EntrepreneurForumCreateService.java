@@ -37,7 +37,19 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 	@Override
 	public boolean authorise(final Request<Forum> request) {
 		assert request != null;
-		return true;
+
+		Integer investmentRoundid = request.getModel().getInteger("investmentRoundid");
+
+		boolean result;
+		InvestmentRound investmentRound;
+		Entrepreneur entrepreneur;
+		Principal principal;
+
+		investmentRound = this.investmentRoundRepository.findOneById(investmentRoundid);
+		entrepreneur = investmentRound.getEntrepreneur();
+		principal = request.getPrincipal();
+		result = entrepreneur.getUserAccount().getId() == principal.getAccountId() && this.repository.findTotalForumByEntrepreneur(investmentRoundid) == 0;
+		return result;
 	}
 
 	@Override
@@ -54,10 +66,6 @@ public class EntrepreneurForumCreateService implements AbstractCreateService<Ent
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		Integer numForum = this.repository.findTotalForumByEntrepreneur(entity.getInvestmentRound().getId());
-
-		model.setAttribute("numForum", numForum);
 
 		model.setAttribute("investmentRoundid", entity.getInvestmentRound().getId());
 		request.unbind(entity, model, "title", "investmentRound");

@@ -19,10 +19,10 @@
 		<acme:form-hidden path="investmentRoundId"/>
 
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.title" path="title"/>
-	<acme:form-moment code="bookkeeper.accounting-record.form.label.creationMoment" path="creationMoment" readonly="true"/>
 		<acme:form-textarea code="bookkeeper.accounting-record.form.label.body" path="body"/>
 	
 		<jstl:if test="${command!='create' }">
+		<acme:form-moment code="bookkeeper.accounting-record.form.label.creationMoment" path="creationMoment" readonly="true"/>
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.investmentRound" path="investmentRound.ticker" readonly="true"/>
 	<acme:form-textbox code="bookkeeper.accounting-record.form.label.bookkeeper" path="bookkeeper.identity.fullName" readonly="true"/>
 		

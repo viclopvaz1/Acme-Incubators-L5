@@ -153,6 +153,11 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 			errors.state(request, sumBudget.equals(entity.getAmountMoney().getAmount()) || !request.getModel().getBoolean("status"), "ticker", "entrepreneur.investment-round.form.error.sumBudget");
 		}
 
+		if (errors.hasErrors()) {
+			entity.setStatus(false);
+			request.getModel().setAttribute("status", false);
+		}
+
 	}
 
 	@Override
