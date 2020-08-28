@@ -30,4 +30,4 @@ investor.application.form.button.return = Return
 investor.application.form.error.spamWordsStatement = The statement contains Spam Words
 investor.application.form.error.ticker = The correct format of tickers is SSS-YY-NNNNNN. SSS, the first letters of Entreprenur Activity Sector. YY, two last digits of this year. NNNNNN, number betweeen 000000 and 999999
 investor.application.form.error.zoneEur = Only the euro, EUR or € currency is allowed
-investor.application.form.error.tickerRepeat = Ticker existente, pruebe con otra
+investor.application.form.error.tickerRepeat = Existing ticker, try another

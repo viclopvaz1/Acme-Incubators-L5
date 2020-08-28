@@ -102,7 +102,7 @@ master.menu.consumer.favourite-link = Enlace favorito
 # master.menu.entrepreneur ##########################################################
 master.menu.entrepreneur = Empresario
 master.menu.entrepreneur.investment-round.list = Lista de Rondas de Inversiones
-master.menu.entrepreneur.investment-round.create = Create Ronda de Inversion
+master.menu.entrepreneur.investment-round.create = Crear Ronda de Inversion
 master.menu.entrepreneur.forum.list = Lista de Foros
 master.menu.entrepreneur.application.list-mine = Lista de Solicitudes
 

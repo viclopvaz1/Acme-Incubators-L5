@@ -1,8 +1,8 @@
 administrator.dashboard.form.message = Número total de Tecnologías agrupadas por sector.
-administrator.dashboard.form.message2 = Número total de Tools agrupadas por sector.
+administrator.dashboard.form.message2 = Número total de Herramientas agrupadas por sector.
 administrator.dashboard.form.message3 = Ratio de Tecnologias open-source versus tecnologías closed-source. 
-administrator.dashboard.form.message4 = Ratio de Tools open-source versus Tools closed-source.
-administrator.dashboard.form.message5 = Ratio de Investment Rounds agrupados por kind.
-administrator.dashboard.form.message6 = Ratio de Applicaciones agrupados por status.
+administrator.dashboard.form.message4 = Ratio de Herramientas open-source versus Tools closed-source.
+administrator.dashboard.form.message5 = Ratio de Rondas de Inversion agrupados por Tipo.
+administrator.dashboard.form.message6 = Ratio de Solicitudes agrupados por Estado.
 administrator.dashboard.form.message7 = Una serie temporal con el número de solicitudes aceptadas, pendientes y rechazadas por día durante los últimos 15 días.
 
